@@ -5,4 +5,9 @@ export const ListContainer = styled.ul`
   flex-direction: row;
   gap: 1.81rem;
   list-style-type: none;
+
+  @media (max-width: 320px) {
+    display: none;
+  }
 `
+export const NavContainer = styled.nav``
