@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
   padding: 1.25rem 6.25rem;
+  height: 93px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,7 +12,7 @@ export const HeaderContainer = styled.header`
     display: none;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     > section {
       display: flex;
     }
@@ -29,7 +30,7 @@ export const Menu = styled.div`
   align-items: center;
   gap: 4.06rem;
 
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `

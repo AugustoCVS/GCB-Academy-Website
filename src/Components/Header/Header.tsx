@@ -10,7 +10,7 @@ import MenuMobile from './components/MenuMobile/MenuMobile'
 import { List } from 'phosphor-react'
 
 export default function Header() {
-  const [menuIsVisible, setMenuIsVisible] = useState(true)
+  const [menuIsVisible, setMenuIsVisible] = useState(false)
 
   return (
     <HeaderContainer>

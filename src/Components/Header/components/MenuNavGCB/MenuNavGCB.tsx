@@ -1,3 +1,5 @@
+'use client'
+
 import { ListContainer, NavContainer } from './styles'
 
 export default function MenuNav() {

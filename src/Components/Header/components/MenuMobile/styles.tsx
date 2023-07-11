@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 export const MenuHamburguerContainer = styled.div<MenuCondition>`
   display: none;
 
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     position: absolute;
     backdrop-filter: blur(3px);
     width: 100%;
