@@ -1,17 +1,28 @@
+import Image from 'next/image'
 import { styled } from 'styled-components'
 
 export const SectionContainer = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6.75rem;
-  padding: 1rem;
-
-  margin-top: 5rem;
+  width: 100vw;
+  overflow: hidden;
 
   h2 {
     color: var(--dark-gold);
   }
+`
+export const WaveTopImg = styled(Image)`
+  position: relative;
+`
+export const SobreNosComponents = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  gap: 6.75rem;
+  margin-top: 3.12rem;
 `
 
 export const DivContent = styled.div`
@@ -19,7 +30,7 @@ export const DivContent = styled.div`
 
   img {
     width: 100%;
-    margin-top: -8rem;
+    margin-top: 2rem;
   }
 `
 export const DivContentText = styled.div`

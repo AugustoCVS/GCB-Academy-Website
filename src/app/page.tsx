@@ -1,18 +1,19 @@
+'use client'
+
 import Introducao from '@/Components/Introducao/Introducao'
-import styles from '../styles/page.module.css'
 import Jornadas from '@/Components/Jornadas/Jornadas'
+import OutrosDizem from '@/Components/OutrosDizem/OutrosDizem'
 import SobreNos from '@/Components/SobreNos/SobreNos'
 
-// import WaveBottom from '../assets/BottomWave.svg'
-// import Image from 'next/image'
+import { MainContainer } from '@/styles/pages.style'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <MainContainer>
       <Introducao />
-      {/* <Image src={WaveBottom} alt="imagem de uma onda" /> */}
       <Jornadas />
       <SobreNos />
-    </main>
+      <OutrosDizem />
+    </MainContainer>
   )
 }

@@ -1,10 +1,18 @@
 import { styled } from 'styled-components'
+import Image from 'next/image'
+
+export const WaveBottomImg = styled(Image)`
+  position: absolute;
+  top: -130px;
+`
 
 export const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--gold);
+  position: relative;
+  height: 48.4375rem;
 
   @media (max-width: 1024px) {
     height: 40rem;

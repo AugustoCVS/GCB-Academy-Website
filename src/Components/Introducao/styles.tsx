@@ -1,19 +1,28 @@
 import { styled } from 'styled-components'
+import Image from 'next/image'
 
 export const SectionIntroContainer = styled.section`
-  height: 500px;
-  width: 100%;
+  position: relative;
+  width: 90%;
+  height: 56.625rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
   @media (max-width: 768px) {
-    padding: 5rem 2rem;
+    padding: 5rem 1rem;
     display: flex;
-    align-items: center;
     text-align: center;
     justify-content: center;
   }
 `
 
+export const BackgroundImg = styled(Image)`
+  background-size: cover;
+`
+
 export const DivIntroContent = styled.div`
+  position: absolute;
   h2 {
     color: var(--gold);
   }
