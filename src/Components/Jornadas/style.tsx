@@ -15,3 +15,9 @@ export const SectionContainer = styled.section`
     color: var(--white);
   }
 `
+
+export const DivJornadaContent = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+`

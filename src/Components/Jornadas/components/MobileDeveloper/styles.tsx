@@ -3,7 +3,7 @@ import { styled } from 'styled-components'
 export const DivContainer = styled.div`
   width: 17.3125rem;
   height: 25.3125rem;
-  background: lightgreen;
+  background: var(--light-orange);
   display: flex;
   flex-direction: column;
   align-items: center;

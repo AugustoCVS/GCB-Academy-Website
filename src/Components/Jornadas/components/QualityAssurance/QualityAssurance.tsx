@@ -3,14 +3,14 @@
 import Image from 'next/image'
 
 import { DivContainer, DivContent } from './styles'
-import WebDeveloperImg from '../../../../assets/Celular.svg'
+import QAImg from '../../../../assets/QA.svg'
 
-export default function WebDeveloper() {
+export default function QualityAssurance() {
   return (
     <DivContainer>
-      <Image src={WebDeveloperImg} alt="imagem de um computador" />
+      <Image src={QAImg} alt="imagem de um computador" />
       <DivContent>
-        <h3>Web Developer</h3>
+        <h3>Quality Assurance</h3>
         <p>21 sugestões</p>
         <span>*****</span>
       </DivContent>

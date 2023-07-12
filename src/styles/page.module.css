@@ -1,5 +1,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 3.19rem;
+  overflow: hidden;
+}
+
+.div{
+  display: flex;
 }
