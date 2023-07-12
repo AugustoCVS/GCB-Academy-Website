@@ -19,5 +19,12 @@ export const SectionContainer = styled.section`
 export const DivJornadaContent = styled.div`
   display: flex;
   align-items: center;
-  padding: 1.5rem;
+  height: 100%;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6rem;
+  }
 `
