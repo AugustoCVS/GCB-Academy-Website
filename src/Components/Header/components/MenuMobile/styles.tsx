@@ -18,12 +18,7 @@ export const MenuHamburguerContainer = styled.div<MenuCondition>`
     align-items: center;
     justify-content: center;
 
-    background: rgb(194, 142, 91);
-    background: linear-gradient(
-      90deg,
-      rgba(194, 142, 91, 0.6194852941176471) 13%,
-      rgba(194, 142, 91, 0.5158438375350141) 47%
-    );
+    background: var(--white);
 
     opacity: 0;
     pointer-events: none;
@@ -66,4 +61,13 @@ export const MenuHamburguerContainer = styled.div<MenuCondition>`
         }
       `}
   }
+`
+
+export const MenuMobileHeader = styled.header`
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 1rem;
+
+  color: var(--gold);
 `

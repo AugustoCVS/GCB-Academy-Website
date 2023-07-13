@@ -31,6 +31,10 @@ export const DivContent = styled.div`
   img {
     width: 100%;
     margin-top: 2rem;
+
+    @media (max-width: 450px) {
+      margin-top: -5rem;
+    }
   }
 `
 export const DivContentText = styled.div`

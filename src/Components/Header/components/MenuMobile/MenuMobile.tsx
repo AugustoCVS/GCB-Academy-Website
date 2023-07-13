@@ -1,7 +1,10 @@
 import { XCircle } from 'phosphor-react'
 import { MenuHamburguerProps } from '@/interfaces/MenuHamburguerProps'
-import { MenuHamburguerContainer } from './styles'
+import { MenuHamburguerContainer, MenuMobileHeader } from './styles'
 import { useEffect } from 'react'
+
+import LogoGcb from '../../../../assets/GcbLogo.svg'
+import Image from 'next/image'
 
 export default function MenuMobile({
   menuIsVisible,
@@ -12,7 +15,10 @@ export default function MenuMobile({
   }, [menuIsVisible])
   return (
     <MenuHamburguerContainer isvisible={menuIsVisible}>
-      <XCircle size={35} onClick={() => setMenuIsVisible(false)} />
+      <MenuMobileHeader>
+        <Image src={LogoGcb} alt="logo da gcb" />
+        <XCircle size={35} onClick={() => setMenuIsVisible(false)} />
+      </MenuMobileHeader>
       <nav>
         <li>Introdução</li>
         <li>Jornadas</li>
