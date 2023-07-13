@@ -1,6 +1,7 @@
 'use client'
 
 import AcademyNews from '@/Components/AcademyNews/AcademyNews'
+import Footer from '@/Components/Footer/Footer'
 import Introducao from '@/Components/Introducao/Introducao'
 import Jornadas from '@/Components/Jornadas/Jornadas'
 import OutrosDizem from '@/Components/OutrosDizem/OutrosDizem'
@@ -16,6 +17,7 @@ export default function Home() {
       <SobreNos />
       <OutrosDizem />
       <AcademyNews />
+      <Footer />
     </MainContainer>
   )
 }
