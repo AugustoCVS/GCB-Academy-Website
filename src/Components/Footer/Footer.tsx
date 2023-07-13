@@ -4,9 +4,11 @@ import Image from 'next/image'
 
 import WaveTop from '../../assets/TopWave2.svg'
 import {
+  DevelopedBy,
   DivContent,
   DivInfos,
   DivLogos,
+  GcbInfos,
   SectionContainer,
   WaveTopImg,
 } from './styles'
@@ -35,36 +37,38 @@ export default function Footer() {
               </a>
             </div>
           </DivLogos>
-          <DivInfos>
-            <h2>Navegação</h2>
-            <div>
-              <p>Introdução</p>
-              <p>Jornada</p>
-              <p>Sobre nós</p>
-              <p>Reviews</p>
-              <p>Newsletter</p>
-            </div>
-          </DivInfos>
-          <DivInfos>
-            <h2>Empresas</h2>
-            <div>
-              <a href="https://gcbinvestimentos.com/">GCB Investimentos</a>
-              <a href="https://adiantesa.com/">Adiante Recebíveis</a>
-              <a href="https://peerbr.com/">PeerBR</a>
-              <a href="https://fmisa.com.br/">FMI</a>
-              <a href="https://bmspartners.com.br/">BMS Partners</a>
-            </div>
-          </DivInfos>
-          <DivInfos>
-            <h2>Contato</h2>
+          <GcbInfos>
+            <DivInfos>
+              <h2>Navegação</h2>
+              <div>
+                <p>Introdução</p>
+                <p>Jornada</p>
+                <p>Sobre nós</p>
+                <p>Reviews</p>
+                <p>Newsletter</p>
+              </div>
+            </DivInfos>
+            <DivInfos>
+              <h2>Empresas</h2>
+              <div>
+                <a href="https://gcbinvestimentos.com/">GCB Investimentos</a>
+                <a href="https://adiantesa.com/">Adiante Recebíveis</a>
+                <a href="https://peerbr.com/">PeerBR</a>
+                <a href="https://fmisa.com.br/">FMI</a>
+                <a href="https://bmspartners.com.br/">BMS Partners</a>
+              </div>
+            </DivInfos>
+            <DivInfos>
+              <h2>Contato</h2>
 
-            <div>
-              <p>(11) 2500-4699</p>
-              <p>academy@gcb.investimentos.com</p>
-            </div>
-          </DivInfos>
+              <div>
+                <p>(11) 2500-4699</p>
+                <p>academy@gcb.investimentos.com</p>
+              </div>
+            </DivInfos>
+          </GcbInfos>
         </DivContent>
-        <p>Desenvolvido por Augusto Santana. Obrigado!</p>
+        <DevelopedBy>Desenvolvido por Augusto Santana. Obrigado!</DevelopedBy>
       </SectionContainer>
     </>
   )

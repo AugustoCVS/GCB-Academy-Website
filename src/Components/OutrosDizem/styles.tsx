@@ -8,11 +8,17 @@ export const SectionContainer = styled.section`
   height: 35rem;
   width: 100%;
   max-width: 1440px;
+  margin-top: 5.6rem;
 
   h2 {
     color: var(--dark-gold);
     text-align: center;
     padding: 1rem;
+    color: #763b05;
+    text-align: center;
+    font-family: inherit;
+    font-size: 2.25rem;
+    font-weight: 700;
   }
 `
 

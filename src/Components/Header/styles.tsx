@@ -23,6 +23,10 @@ export const HeaderContainer = styled.header`
       padding: 0.5rem;
     }
   }
+
+  @media (min-width: 769px) and (max-width: 1000px) {
+    gap: 2.06rem;
+  }
 `
 
 export const Menu = styled.div`
@@ -32,6 +36,10 @@ export const Menu = styled.div`
 
   @media (max-width: 768px) {
     display: none;
+  }
+
+  @media (min-width: 769px) and (max-width: 1000px) {
+    gap: 1.06rem;
   }
 `
 

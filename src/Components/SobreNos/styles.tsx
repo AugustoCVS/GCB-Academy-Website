@@ -8,9 +8,14 @@ export const SectionContainer = styled.section`
   align-items: center;
   width: 100vw;
   overflow: hidden;
+  top: -10px;
 
   h2 {
     color: var(--dark-gold);
+    text-align: center;
+    font-family: inherit;
+    font-size: 2.25rem;
+    font-weight: 700;
   }
 `
 export const WaveTopImg = styled(Image)`
@@ -21,7 +26,7 @@ export const SobreNosComponents = styled.div`
   flex-direction: column;
   align-items: center;
   width: 90%;
-  gap: 6.75rem;
+  gap: 4.75rem;
   margin-top: 3.12rem;
 `
 
@@ -36,6 +41,11 @@ export const DivContent = styled.div`
       margin-top: -5rem;
     }
   }
+
+  @media (min-width: 1150px) {
+    display: flex;
+    align-items: center;
+  }
 `
 export const DivContentText = styled.div`
   display: flex;
@@ -46,5 +56,9 @@ export const DivContentText = styled.div`
     span {
       color: var(--gold);
     }
+
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 `

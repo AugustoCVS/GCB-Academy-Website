@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 import { HeaderContainer, Menu, MenuButton } from './styles'
 import GcbLogo from '../../assets/GcbLogo.svg'
-import MenuNav from './components/MenuNavGCB/MenuNavGCB'
+import MenuNavGcb from './components/MenuNavGCB/MenuNavGCB'
 import MenuMobile from './components/MenuMobile/MenuMobile'
 import { List } from 'phosphor-react'
 
@@ -19,11 +19,15 @@ export default function Header() {
         setMenuIsVisible={setMenuIsVisible}
       />
       <section>
-        <List onClick={() => setMenuIsVisible(true)} color="#C28E5B" />
+        <List
+          onClick={() => setMenuIsVisible(true)}
+          color="#C28E5B"
+          size={50}
+        />
       </section>
       <Image src={GcbLogo} alt="Logo da Empresa GCB" />
       <Menu>
-        <MenuNav />
+        <MenuNavGcb />
         <MenuButton>Entrar</MenuButton>
       </Menu>
     </HeaderContainer>

@@ -43,6 +43,8 @@ export const MenuHamburguerContainer = styled.div<MenuCondition>`
       list-style-type: none;
       transform: scale(0.7);
       transition: 0.7s;
+      font-size: 1.5rem;
+      color: var(--dark-gold);
     }
 
     ${({ isvisible }) =>
