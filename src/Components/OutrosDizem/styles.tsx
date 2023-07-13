@@ -20,6 +20,10 @@ export const SectionContainer = styled.section`
     font-size: 2.25rem;
     font-weight: 700;
   }
+
+  @media (max-width: 440px) {
+    height: 45rem;
+  }
 `
 
 export const DivContent = styled.div`

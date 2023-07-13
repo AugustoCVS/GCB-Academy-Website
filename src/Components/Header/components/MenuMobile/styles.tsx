@@ -32,6 +32,7 @@ export const MenuHamburguerContainer = styled.div<MenuCondition>`
       right: 1rem;
       transform: rotate(45deg);
       transition: 0.7s;
+      color: var(--dark-gold);
     }
 
     nav {
@@ -63,13 +64,4 @@ export const MenuHamburguerContainer = styled.div<MenuCondition>`
         }
       `}
   }
-`
-
-export const MenuMobileHeader = styled.header`
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 1rem;
-
-  color: var(--gold);
 `
