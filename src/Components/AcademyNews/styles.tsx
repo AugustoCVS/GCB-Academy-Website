@@ -4,6 +4,8 @@ export const MainAcademyNews = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 40rem;
+  margin-top: 10rem;
 `
 
 export const SectionContainer = styled.section`
