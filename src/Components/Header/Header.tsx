@@ -3,11 +3,12 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-import { HeaderContainer, Menu, MenuButton } from './styles'
+import { HeaderContainer, Menu } from './styles'
 import GcbLogo from '@/assets/GcbLogo.svg'
 import MenuNavGcb from './components/MenuNavGCB/MenuNavGCB'
 import MenuMobile from './components/MenuMobile/MenuMobile'
 import { List } from 'phosphor-react'
+import { Button } from '../Button/Button'
 
 export default function Header() {
   const [menuIsVisible, setMenuIsVisible] = useState(false)
@@ -28,7 +29,9 @@ export default function Header() {
       <Image src={GcbLogo} alt="Logo da Empresa GCB" />
       <Menu>
         <MenuNavGcb />
-        <MenuButton>Entrar</MenuButton>
+        <Button type="button" background="gold" color="white">
+          Entrar
+        </Button>
       </Menu>
     </HeaderContainer>
   )

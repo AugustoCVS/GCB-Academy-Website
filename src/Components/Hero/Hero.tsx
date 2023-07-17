@@ -1,11 +1,7 @@
 'use client'
 
-import {
-  IntroButton,
-  BackgroundImg,
-  SectionHeroContainer,
-  DivHeroContent,
-} from './style'
+import { Button } from '../Button/Button'
+import { BackgroundImg, SectionHeroContainer, DivHeroContent } from './style'
 import BgImg from '@/assets/BackgroundImg.svg'
 
 export default function Hero() {
@@ -23,7 +19,9 @@ export default function Hero() {
           Desde 2021, o GCB Academy tem ajudado pessoas a crescerem
           profissionalmente.
         </p>
-        <IntroButton>Vamos Explorar!</IntroButton>
+        <Button type="button" background="gold" color="white">
+          Vamos explorar!
+        </Button>
       </DivHeroContent>
     </SectionHeroContainer>
   )

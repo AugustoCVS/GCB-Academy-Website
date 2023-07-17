@@ -45,6 +45,10 @@ export const DivHeroContent = styled.div`
     line-height: normal;
   }
 
+  button {
+    font-size: 1.125rem;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     display: flex;
@@ -67,20 +71,4 @@ export const DivHeroContent = styled.div`
       width: 22.5rem;
     }
   }
-`
-
-export const IntroButton = styled.button`
-  border-radius: 3rem;
-  background: ${(props) => props.theme.gold};
-  padding: 0.2rem 0.7rem;
-  border: none;
-
-  width: 12.0625rem;
-  height: 2.6875rem;
-
-  color: ${(props) => props.theme.white};
-  text-align: center;
-  font-family: inherit;
-  font-size: 1.125rem;
-  font-weight: 700;
 `

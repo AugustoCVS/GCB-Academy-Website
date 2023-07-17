@@ -41,20 +41,8 @@ export const Menu = styled.div`
   @media (min-width: 769px) and (max-width: 1000px) {
     gap: 1.06rem;
   }
-`
 
-export const MenuButton = styled.button`
-  width: 7.625rem;
-  height: 2.6875rem;
-  border-radius: 3rem;
-  background: ${(props) => props.theme.gold};
-  border: none;
-
-  color: ${(props) => props.theme.white};
-  text-align: center;
-  font-family: inherit;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  button {
+    font-size: 1.125rem;
+  }
 `

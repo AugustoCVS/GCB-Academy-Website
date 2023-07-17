@@ -10,6 +10,7 @@ import {
   MainAcademyNews,
   SectionContainer,
 } from './styles'
+import { Button } from '../Button/Button'
 
 export default function AcademyNews() {
   return (
@@ -22,7 +23,9 @@ export default function AcademyNews() {
           </p>
           <DivInputEmail>
             <input type="text" placeholder="Seu e-mail aqui" />
-            <button>Assine</button>
+            <Button type="button" background="gold" color="white">
+              Assine
+            </Button>
           </DivInputEmail>
         </DivAcademyNewsContent>
         <DivImage>

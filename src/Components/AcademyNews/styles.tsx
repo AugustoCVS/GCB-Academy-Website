@@ -132,18 +132,7 @@ export const DivInputEmail = styled.div`
     position: absolute;
     right: 0;
     border: 0;
-    width: 9.61rem;
-    height: 2.852rem;
-    background-color: ${(props) => props.theme.gold};
-    color: ${(props) => props.theme.white};
-    border-radius: 1.4375rem;
-    border: none;
-
-    color: ${(props) => props.theme.white};
-    text-align: center;
-    font-family: inherit;
     font-size: 1.125rem;
-    font-weight: 600;
   }
 
   @media (max-width: 499px) {
