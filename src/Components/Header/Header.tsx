@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
+import * as Dialog from '@radix-ui/react-dialog'
 
 import { HeaderContainer, Menu } from './styles'
 import GcbLogo from '@/assets/GcbLogo.svg'
@@ -9,6 +10,7 @@ import MenuNavGcb from './components/MenuNavGCB/MenuNavGCB'
 import MenuMobile from './components/MenuMobile/MenuMobile'
 import { List } from 'phosphor-react'
 import { Button } from '../Button/Button'
+import LoginModal from '../Modal/Components/LoginModal'
 
 export default function Header() {
   const [menuIsVisible, setMenuIsVisible] = useState(false)
@@ -29,9 +31,14 @@ export default function Header() {
       <Image src={GcbLogo} alt="Logo da Empresa GCB" />
       <Menu>
         <MenuNavGcb />
-        <Button type="button" background="gold" color="white">
-          Entrar
-        </Button>
+        <Dialog.Root>
+          <Button type="button" background="gold" color="white">
+            <Dialog.Trigger asChild>
+              <p>Entrar</p>
+            </Dialog.Trigger>
+          </Button>
+          <LoginModal />
+        </Dialog.Root>
       </Menu>
     </HeaderContainer>
   )

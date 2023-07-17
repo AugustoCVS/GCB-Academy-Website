@@ -22,5 +22,6 @@ export const BtnContainer = styled.button<ContainerProps>`
     border-radius: 42px;
     color: ${buttonColors[color]};
     font-weight: bold;
+    cursor: pointer;
   `}
 `
