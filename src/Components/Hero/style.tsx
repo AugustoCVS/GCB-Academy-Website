@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
 import Image from 'next/image'
 
-export const SectionIntroContainer = styled.section`
+export const SectionHeroContainer = styled.section`
   position: relative;
   width: 95%;
   height: 56.625rem;
@@ -21,7 +21,7 @@ export const BackgroundImg = styled(Image)`
   background-size: cover;
 `
 
-export const DivIntroContent = styled.div`
+export const DivHeroContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.15rem;
@@ -29,7 +29,7 @@ export const DivIntroContent = styled.div`
   padding: 6.25rem;
 
   h2 {
-    color: var(--gold);
+    color: ${(props) => props.theme.gold};
     font-family: inherit;
     font-size: 3.125rem;
     font-style: normal;
@@ -71,14 +71,14 @@ export const DivIntroContent = styled.div`
 
 export const IntroButton = styled.button`
   border-radius: 3rem;
-  background: var(--gold);
+  background: ${(props) => props.theme.gold};
   padding: 0.2rem 0.7rem;
   border: none;
 
   width: 12.0625rem;
   height: 2.6875rem;
 
-  color: var(--white);
+  color: ${(props) => props.theme.white};
   text-align: center;
   font-family: inherit;
   font-size: 1.125rem;

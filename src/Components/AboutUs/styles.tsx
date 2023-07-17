@@ -11,7 +11,7 @@ export const SectionContainer = styled.section`
   top: -10px;
 
   h2 {
-    color: var(--dark-gold);
+    color: ${(props) => props.theme.darkGold};
     text-align: center;
     font-family: inherit;
     font-size: 2.25rem;
@@ -21,7 +21,7 @@ export const SectionContainer = styled.section`
 export const WaveTopImg = styled(Image)`
   position: relative;
 `
-export const SobreNosComponents = styled.div`
+export const AboutUsComponents = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +54,7 @@ export const DivContentText = styled.div`
 
   p {
     span {
-      color: var(--gold);
+      color: ${(props) => props.theme.gold};
     }
 
     font-family: inherit;

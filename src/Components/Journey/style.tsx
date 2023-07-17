@@ -6,10 +6,10 @@ export const WaveBottomImg = styled(Image)`
   top: -130px;
 `
 
-export const SectionContainer = styled.section`
+export const SectionJourneyContainer = styled.section`
   display: flex;
   flex-direction: column;
-  background-color: var(--gold);
+  background-color: ${(props) => props.theme.gold};
   position: relative;
   height: 48.4375rem;
 
@@ -20,15 +20,14 @@ export const SectionContainer = styled.section`
   h2 {
     text-align: center;
     padding: 2.94rem;
-    color: var(--white);
-    color: #fff;
+    color: ${(props) => props.theme.white};
     font-family: inherit;
     font-size: 2.25rem;
     font-weight: 700;
   }
 `
 
-export const DivJornadaContent = styled.div`
+export const DivJourneyContent = styled.div`
   display: flex;
   align-items: center;
   padding: 0 6.25rem;

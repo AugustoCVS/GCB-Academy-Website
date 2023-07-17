@@ -1,9 +1,10 @@
 'use cliemt'
 
 import Image from 'next/image'
-import CaixaDeCorreio from '../../assets/CaixaDeCorreio.svg'
+
+import CaixaDeCorreio from '@/assets/CaixaDeCorreio.svg'
 import {
-  DivContent,
+  DivAcademyNewsContent,
   DivImage,
   DivInputEmail,
   MainAcademyNews,
@@ -14,7 +15,7 @@ export default function AcademyNews() {
   return (
     <MainAcademyNews>
       <SectionContainer>
-        <DivContent>
+        <DivAcademyNewsContent>
           <h2>Inscreva-se no Academy News</h2>
           <p>
             Receba as últimas notícias, atualizações e outras coisas da semana.
@@ -23,7 +24,7 @@ export default function AcademyNews() {
             <input type="text" placeholder="Seu e-mail aqui" />
             <button>Assine</button>
           </DivInputEmail>
-        </DivContent>
+        </DivAcademyNewsContent>
         <DivImage>
           <Image src={CaixaDeCorreio} alt="imagem de uma caixa de correio" />
         </DivImage>

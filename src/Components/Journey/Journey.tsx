@@ -11,12 +11,12 @@ import QualityAssurance from './components/QualityAssurance/QualityAssurance'
 import WebDeveloper from './components/WebDeveloper/WebDeveloper'
 import {
   DivComponent,
-  DivJornadaContent,
-  SectionContainer,
+  DivJourneyContent,
+  SectionJourneyContainer,
   WaveBottomImg,
 } from './style'
 
-export default function Jornadas() {
+export default function Journey() {
   const responsive = {
     320: { items: 1 },
     780: { items: 2 },
@@ -40,17 +40,17 @@ export default function Jornadas() {
   ]
 
   return (
-    <SectionContainer>
+    <SectionJourneyContainer>
       <WaveBottomImg src={WaveBottom} alt="imagem de uma onda" />
       <h2>Jornadas</h2>
-      <DivJornadaContent>
+      <DivJourneyContent>
         <AliceCarousel
           mouseTracking
           items={items}
           responsive={responsive}
           controlsStrategy="alternate"
         />
-      </DivJornadaContent>
-    </SectionContainer>
+      </DivJourneyContent>
+    </SectionJourneyContainer>
   )
 }

@@ -47,10 +47,10 @@ export const MenuButton = styled.button`
   width: 7.625rem;
   height: 2.6875rem;
   border-radius: 3rem;
-  background: var(--gold);
+  background: ${(props) => props.theme.gold};
   border: none;
 
-  color: var(--white);
+  color: ${(props) => props.theme.white};
   text-align: center;
   font-family: inherit;
   font-size: 1.125rem;

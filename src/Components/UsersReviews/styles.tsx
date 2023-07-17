@@ -11,10 +11,9 @@ export const SectionContainer = styled.section`
   margin-top: 5.6rem;
 
   h2 {
-    color: var(--dark-gold);
+    color: ${(props) => props.theme.darkGold};
     text-align: center;
     padding: 1rem;
-    color: #763b05;
     text-align: center;
     font-family: inherit;
     font-size: 2.25rem;
@@ -55,7 +54,7 @@ export const UserComment = styled.div`
   width: 400px;
 
   h3 {
-    color: var(--dark-gold);
+    color: ${(props) => props.theme.darkGold};
   }
 
   @media (max-width: 500px) {

@@ -3,20 +3,20 @@
 import Image from 'next/image'
 
 import {
+  AboutUsComponents,
   DivContent,
   DivContentText,
   SectionContainer,
-  SobreNosComponents,
   WaveTopImg,
 } from './styles'
-import SobreNosImg from '../../assets/SobreNosImg.svg'
-import WaveTop from '../../assets/TopWave.svg'
+import SobreNosImg from '@/assets/SobreNosImg.svg'
+import WaveTop from '@/assets/TopWave.svg'
 
-export default function SobreNos() {
+export default function AboutUs() {
   return (
     <SectionContainer>
       <WaveTopImg src={WaveTop} alt="imagem de uma onda" />
-      <SobreNosComponents>
+      <AboutUsComponents>
         <h2>Sobre nós</h2>
         <DivContent>
           <DivContentText>
@@ -46,7 +46,7 @@ export default function SobreNos() {
             alt="imagem de uma pessoa mexendo em uma tela gigante"
           />
         </DivContent>
-      </SobreNosComponents>
+      </AboutUsComponents>
     </SectionContainer>
   )
 }

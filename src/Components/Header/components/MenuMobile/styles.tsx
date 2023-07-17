@@ -18,7 +18,7 @@ export const MenuHamburguerContainer = styled.div<MenuCondition>`
     align-items: center;
     justify-content: center;
 
-    background: var(--white);
+    background: ${(props) => props.theme.white};
 
     opacity: 0;
     pointer-events: none;
@@ -32,7 +32,7 @@ export const MenuHamburguerContainer = styled.div<MenuCondition>`
       right: 1rem;
       transform: rotate(45deg);
       transition: 0.7s;
-      color: var(--dark-gold);
+      color: ${(props) => props.theme.darkGold};
     }
 
     nav {
@@ -45,7 +45,7 @@ export const MenuHamburguerContainer = styled.div<MenuCondition>`
       transform: scale(0.7);
       transition: 0.7s;
       font-size: 1.5rem;
-      color: var(--dark-gold);
+      color: ${(props) => props.theme.darkGold};
     }
 
     ${({ isvisible }) =>

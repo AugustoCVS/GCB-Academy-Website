@@ -3,7 +3,7 @@
 import Image from 'next/image'
 
 import { DivContainer, DivContent } from './styles'
-import QAImg from '../../../../assets/QA.svg'
+import QAImg from '@/assets/QA.svg'
 
 export default function QualityAssurance() {
   return (

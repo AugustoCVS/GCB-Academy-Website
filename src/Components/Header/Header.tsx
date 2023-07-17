@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 import { HeaderContainer, Menu, MenuButton } from './styles'
-import GcbLogo from '../../assets/GcbLogo.svg'
+import GcbLogo from '@/assets/GcbLogo.svg'
 import MenuNavGcb from './components/MenuNavGCB/MenuNavGCB'
 import MenuMobile from './components/MenuMobile/MenuMobile'
 import { List } from 'phosphor-react'

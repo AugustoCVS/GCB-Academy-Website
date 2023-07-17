@@ -16,7 +16,7 @@ import {
 } from './styles'
 // import Comments from './components/Comments/Comments'
 
-export default function OutrosDizem() {
+export default function UsersReviews() {
   const items = [
     <DivUserComment key={1}>
       <UserComment>

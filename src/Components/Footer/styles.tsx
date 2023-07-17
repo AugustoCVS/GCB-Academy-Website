@@ -6,10 +6,10 @@ export const WaveTopImg = styled(Image)`
   height: 16.5rem;
 `
 
-export const SectionContainer = styled.section`
+export const SectionFooterContainer = styled.section`
   height: 30.1875rem;
   max-width: 1440px;
-  background-color: var(--gold);
+  background-color: ${(props) => props.theme.gold};
   padding: 0 6.25rem;
   display: flex;
   flex-direction: column;
@@ -32,13 +32,13 @@ export const SectionContainer = styled.section`
 export const DevelopedBy = styled.p`
   width: 20rem;
   text-align: center;
-  color: var(--white);
+  color: ${(props) => props.theme.white};
 `
 
-export const DivContent = styled.div`
+export const DivFooterContent = styled.div`
   height: 20.5rem;
   width: 100%;
-  border-bottom: 1px solid var(--white);
+  border-bottom: 1px solid ${(props) => props.theme.white};
   padding-bottom: 4.5rem;
   display: flex;
   gap: 8.53rem;
@@ -70,10 +70,10 @@ export const DivLogos = styled.div`
   div {
     display: flex;
     gap: 2rem;
-    color: var(--white);
+    color: ${(props) => props.theme.white};
     a {
       text-decoration: none;
-      color: var(--white);
+      color: ${(props) => props.theme.white};
     }
   }
 
@@ -105,7 +105,7 @@ export const GcbInfos = styled.div`
 
   a {
     text-decoration: none;
-    color: var(--white);
+    color: ${(props) => props.theme.white};
     font-family: inherit;
     font-size: 1.125rem;
     font-weight: 400;
@@ -139,7 +139,7 @@ export const GcbInfos = styled.div`
 
 export const DivInfos = styled.div`
   h2 {
-    color: var(--white);
+    color: ${(props) => props.theme.white};
     font-family: inherit;
     font-size: 1.125rem;
     font-weight: 700;
@@ -154,7 +154,7 @@ export const DivInfos = styled.div`
     flex-direction: column;
     gap: 0.81rem;
 
-    color: var(--white);
+    color: ${(props) => props.theme.white};
     font-family: inherit;
     font-size: 1.125rem;
     font-weight: 400;

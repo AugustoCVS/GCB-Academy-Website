@@ -13,7 +13,7 @@ export const SectionContainer = styled.section`
   grid-template-columns: 2fr 1fr;
   align-items: center;
   justify-content: center;
-  background-color: var(--gold);
+  background-color: ${(props) => props.theme.gold};
   width: 77.5rem;
   height: 24.8rem;
   border-radius: 1.25rem;
@@ -45,13 +45,13 @@ export const SectionContainer = styled.section`
     align-items: center;
   }
 `
-export const DivContent = styled.div`
+export const DivAcademyNewsContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.56rem;
 
   h2 {
-    color: var(--white);
+    color: ${(props) => props.theme.white};
     font-family: inherit;
     font-size: 2.25rem;
     font-weight: 700;
@@ -59,7 +59,7 @@ export const DivContent = styled.div`
 
   p {
     width: 32.1875rem;
-    color: var(--white);
+    color: ${(props) => props.theme.white};
     font-family: inherit;
     font-size: 1.125rem;
     font-weight: 400;
@@ -115,7 +115,7 @@ export const DivInputEmail = styled.div`
     width: 100%;
     height: 3.224rem;
     border-radius: 1.625rem;
-    background: var(--white);
+    background: ${(props) => props.theme.white};
     border: none;
 
     color: rgba(41, 50, 65, 0.5);
@@ -134,12 +134,12 @@ export const DivInputEmail = styled.div`
     border: 0;
     width: 9.61rem;
     height: 2.852rem;
-    background-color: var(--gold);
-    color: var(--white);
+    background-color: ${(props) => props.theme.gold};
+    color: ${(props) => props.theme.white};
     border-radius: 1.4375rem;
     border: none;
 
-    color: var(--white);
+    color: ${(props) => props.theme.white};
     text-align: center;
     font-family: inherit;
     font-size: 1.125rem;
@@ -154,8 +154,8 @@ export const DivInputEmail = styled.div`
 
     button {
       position: relative;
-      background-color: var(--white);
-      color: var(--gold);
+      background-color: ${(props) => props.theme.white};
+      color: ${(props) => props.theme.gold};
     }
   }
 
@@ -176,7 +176,7 @@ export const DivImage = styled.div`
   width: 20.75rem;
   height: 20.75rem;
   border-radius: 999px;
-  background-color: var(--white);
+  background-color: ${(props) => props.theme.white};
   display: flex;
   align-items: center;
 

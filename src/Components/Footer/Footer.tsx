@@ -1,26 +1,26 @@
 'use client'
 
 import Image from 'next/image'
+import { FacebookLogo, InstagramLogo, TwitterLogo } from 'phosphor-react'
 
-import WaveTop from '../../assets/TopWave2.svg'
+import WaveTop from '@/assets/TopWave2.svg'
+import GcbLogoBranca from '@/assets/GcbLogoBranca.svg'
 import {
   DevelopedBy,
-  DivContent,
+  DivFooterContent,
   DivInfos,
   DivLogos,
   GcbInfos,
-  SectionContainer,
+  SectionFooterContainer,
   WaveTopImg,
 } from './styles'
-import GcbLogoBranca from '../../assets/GcbLogoBranca.svg'
-import { FacebookLogo, InstagramLogo, TwitterLogo } from 'phosphor-react'
 
 export default function Footer() {
   return (
     <>
       <WaveTopImg src={WaveTop} alt="imagem de uma onda" />
-      <SectionContainer>
-        <DivContent>
+      <SectionFooterContainer>
+        <DivFooterContent>
           <DivLogos>
             <Image src={GcbLogoBranca} alt="logo branca da GCB" />
 
@@ -67,9 +67,9 @@ export default function Footer() {
               </div>
             </DivInfos>
           </GcbInfos>
-        </DivContent>
+        </DivFooterContent>
         <DevelopedBy>Desenvolvido por Augusto Santana. Obrigado!</DevelopedBy>
-      </SectionContainer>
+      </SectionFooterContainer>
     </>
   )
 }

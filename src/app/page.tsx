@@ -1,23 +1,30 @@
 'use client'
 
+import { ThemeProvider } from 'styled-components'
+
 import AcademyNews from '@/Components/AcademyNews/AcademyNews'
 import Footer from '@/Components/Footer/Footer'
-import Introducao from '@/Components/Introducao/Introducao'
-import Jornadas from '@/Components/Jornadas/Jornadas'
-import OutrosDizem from '@/Components/OutrosDizem/OutrosDizem'
-import SobreNos from '@/Components/SobreNos/SobreNos'
+import Header from '@/Components/Header/Header'
+import Hero from '@/Components/Hero/Hero'
+import Journey from '@/Components/Journey/Journey'
+import UsersReviews from '@/Components/UsersReviews/UsersReviews'
+import AboutUs from '@/Components/AboutUs/AboutUs'
 
 import { MainContainer } from '@/styles/pages.style'
+import { defaultTheme } from '@/styles/themes/defaultTheme'
 
 export default function Home() {
   return (
-    <MainContainer>
-      <Introducao />
-      <Jornadas />
-      <SobreNos />
-      <OutrosDizem />
-      <AcademyNews />
-      <Footer />
-    </MainContainer>
+    <ThemeProvider theme={defaultTheme}>
+      <MainContainer>
+        <Header />
+        <Hero />
+        <Journey />
+        <AboutUs />
+        <UsersReviews />
+        <AcademyNews />
+        <Footer />
+      </MainContainer>
+    </ThemeProvider>
   )
 }

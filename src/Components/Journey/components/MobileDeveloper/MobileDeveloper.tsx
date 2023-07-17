@@ -3,7 +3,7 @@
 import Image from 'next/image'
 
 import { DivContainer, DivContent } from './styles'
-import CelularImg from '../../../../assets/Celular.svg'
+import CelularImg from '@/assets/Celular.svg'
 
 export default function MobileDeveloper() {
   return (

@@ -3,7 +3,7 @@
 import Image from 'next/image'
 
 import { DivContainer, DivContent } from './styles'
-import BackendImg from '../../../../assets/QA.svg'
+import BackendImg from '@/assets/QA.svg'
 
 export default function BackendDeveloper() {
   return (

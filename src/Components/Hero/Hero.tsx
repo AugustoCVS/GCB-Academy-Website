@@ -1,31 +1,30 @@
 'use client'
 
 import {
-  SectionIntroContainer,
-  DivIntroContent,
   IntroButton,
   BackgroundImg,
-} from './styles'
+  SectionHeroContainer,
+  DivHeroContent,
+} from './style'
+import BgImg from '@/assets/BackgroundImg.svg'
 
-import BgImg from '../../assets/BackgroundImg.svg'
-
-export default function Introducao() {
+export default function Hero() {
   return (
-    <SectionIntroContainer>
+    <SectionHeroContainer>
       <BackgroundImg
         src={BgImg}
         alt="Papel de parede"
         layout="cover"
         height={910}
       />
-      <DivIntroContent>
+      <DivHeroContent>
         <h2>Eleve sua jornada para o próximo nível com excelência!</h2>
         <p>
           Desde 2021, o GCB Academy tem ajudado pessoas a crescerem
           profissionalmente.
         </p>
         <IntroButton>Vamos Explorar!</IntroButton>
-      </DivIntroContent>
-    </SectionIntroContainer>
+      </DivHeroContent>
+    </SectionHeroContainer>
   )
 }
