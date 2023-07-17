@@ -12,6 +12,7 @@ import {
 } from './styles'
 import { Button } from '../Button/Button'
 import { Title } from '../Title/Title'
+import { Input } from '../Input/Input'
 
 export default function AcademyNews() {
   return (
@@ -25,7 +26,7 @@ export default function AcademyNews() {
             Receba as últimas notícias, atualizações e outras coisas da semana.
           </p>
           <DivInputEmail>
-            <input type="text" placeholder="Seu e-mail aqui" />
+            <Input color="black" type="text" placeholder="Seu e-mail aqui" />
             <Button type="button" background="gold" color="white">
               Assine
             </Button>

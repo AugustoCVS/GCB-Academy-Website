@@ -113,17 +113,12 @@ export const DivInputEmail = styled.div`
 
   input {
     width: 100%;
-    height: 3.224rem;
     border-radius: 1.625rem;
     background: ${(props) => props.theme.white};
     border: none;
 
-    color: rgba(41, 50, 65, 0.5);
     font-family: inherit;
-    font-size: 1.125rem;
     font-style: normal;
-    font-weight: 300;
-    line-height: normal;
     padding-left: 1.8rem;
   }
 
