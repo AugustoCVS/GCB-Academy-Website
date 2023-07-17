@@ -15,6 +15,7 @@ import {
   SectionJourneyContainer,
   WaveBottomImg,
 } from './style'
+import { Title } from '../Title/Title'
 
 export default function Journey() {
   const responsive = {
@@ -42,7 +43,9 @@ export default function Journey() {
   return (
     <SectionJourneyContainer>
       <WaveBottomImg src={WaveBottom} alt="imagem de uma onda" />
-      <h2>Jornadas</h2>
+      <Title type="h2" color="white">
+        Jornada
+      </Title>
       <DivJourneyContent>
         <AliceCarousel
           mouseTracking

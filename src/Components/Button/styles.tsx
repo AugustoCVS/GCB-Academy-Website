@@ -5,7 +5,6 @@ import { defaultTheme } from '@/styles/themes/defaultTheme'
 interface ContainerProps {
   background: 'gold' | 'white'
   color: 'white' | 'gold'
-  withGlow?: boolean
 }
 
 const buttonColors = {

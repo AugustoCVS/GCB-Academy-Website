@@ -7,12 +7,11 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
     children: ReactNode
     background: 'gold' | 'white'
     color: 'white' | 'gold'
-    withGlow?: boolean
   }
 
-export function Button({ children, background, color, withGlow }: ButtonProps) {
+export function Button({ children, background, color }: ButtonProps) {
   return (
-    <BtnContainer background={background} color={color} withGlow={withGlow}>
+    <BtnContainer background={background} color={color}>
       {children}
     </BtnContainer>
   )

@@ -20,10 +20,6 @@ export const SectionJourneyContainer = styled.section`
   h2 {
     text-align: center;
     padding: 2.94rem;
-    color: ${(props) => props.theme.white};
-    font-family: inherit;
-    font-size: 2.25rem;
-    font-weight: 700;
   }
 `
 

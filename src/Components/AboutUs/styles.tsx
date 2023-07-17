@@ -9,14 +9,6 @@ export const SectionContainer = styled.section`
   width: 100vw;
   overflow: hidden;
   top: -10px;
-
-  h2 {
-    color: ${(props) => props.theme.darkGold};
-    text-align: center;
-    font-family: inherit;
-    font-size: 2.25rem;
-    font-weight: 700;
-  }
 `
 export const WaveTopImg = styled(Image)`
   position: relative;

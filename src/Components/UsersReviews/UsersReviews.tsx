@@ -14,7 +14,7 @@ import {
   DivImage,
   DivContent,
 } from './styles'
-// import Comments from './components/Comments/Comments'
+import { Title } from '../Title/Title'
 
 export default function UsersReviews() {
   const items = [
@@ -85,7 +85,9 @@ export default function UsersReviews() {
 
   return (
     <SectionContainer>
-      <h2>Veja o que outros colaboradores dizem!</h2>
+      <Title type="h2" color="darkGold">
+        Veja o que outros colaboradores dizem!
+      </Title>
       <DivContent>
         <AliceCarousel
           mouseTracking

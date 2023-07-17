@@ -131,7 +131,6 @@ export const DivInputEmail = styled.div`
     margin: 0.25rem;
     position: absolute;
     right: 0;
-    border: 0;
     font-size: 1.125rem;
   }
 

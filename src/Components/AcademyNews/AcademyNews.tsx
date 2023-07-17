@@ -11,13 +11,16 @@ import {
   SectionContainer,
 } from './styles'
 import { Button } from '../Button/Button'
+import { Title } from '../Title/Title'
 
 export default function AcademyNews() {
   return (
     <MainAcademyNews>
       <SectionContainer>
         <DivAcademyNewsContent>
-          <h2>Inscreva-se no Academy News</h2>
+          <Title type="h2" color="white">
+            Inscreva-se no Academy News
+          </Title>
           <p>
             Receba as últimas notícias, atualizações e outras coisas da semana.
           </p>
