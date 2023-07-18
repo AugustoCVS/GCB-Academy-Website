@@ -17,7 +17,8 @@ import {
 } from './styles'
 import { Input } from '../../Input/Input'
 import { Button } from '../../Button/Button'
-import RegisterModal from '../LoginAndRegister/RegisterModal'
+import CreateSuggestionModal from './Suggestions/CreateSuggestionModal'
+import SuggestionModal from './Suggestions/SuggestionModal'
 
 export default function WebDeveloperModal() {
   return (
@@ -54,7 +55,7 @@ export default function WebDeveloperModal() {
                   <p>Criar Sugestão</p>
                 </Dialog.Trigger>
 
-                <RegisterModal />
+                <CreateSuggestionModal />
               </Dialog.Root>
             </Button>
           </DivButton>
@@ -64,23 +65,35 @@ export default function WebDeveloperModal() {
             <span>A-z</span>
           </DivSuggestions>
 
-          <Suggestions>
-            <div>
-              <WarningCircle size={20} />
-              <p>Novos Desafios</p>
-            </div>
+          <Dialog.Root>
+            <Dialog.Trigger asChild>
+              <Suggestions>
+                <div>
+                  <WarningCircle size={20} />
+                  <p>Novos Desafios</p>
+                </div>
 
-            <p>Jofran Lima</p>
-          </Suggestions>
+                <p>Jofran Lima</p>
+              </Suggestions>
+            </Dialog.Trigger>
 
-          <Suggestions>
-            <div>
-              <WarningCircle size={20} />
-              <p>Tecnologias</p>
-            </div>
+            <SuggestionModal />
+          </Dialog.Root>
 
-            <p>Rafael Ramos Costa</p>
-          </Suggestions>
+          <Dialog.Root>
+            <Dialog.Trigger asChild>
+              <Suggestions>
+                <div>
+                  <WarningCircle size={20} />
+                  <p>Tecnologias</p>
+                </div>
+
+                <p>Jofran Lima</p>
+              </Suggestions>
+            </Dialog.Trigger>
+
+            <SuggestionModal />
+          </Dialog.Root>
         </ModalForm>
       </Content>
     </Dialog.Portal>
