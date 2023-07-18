@@ -1,7 +1,10 @@
 import { XCircle } from 'phosphor-react'
+import { useEffect } from 'react'
+import * as Dialog from '@radix-ui/react-dialog'
+
 import { MenuHamburguerProps } from '@/interfaces/MenuHamburguerProps'
 import { MenuHamburguerContainer } from './styles'
-import { useEffect } from 'react'
+import LoginModal from '@/Components/Modal/LoginAndRegister/LoginModal'
 
 export default function MenuMobile({
   menuIsVisible,
@@ -17,7 +20,13 @@ export default function MenuMobile({
         <li>Introdução</li>
         <li>Jornadas</li>
         <li>Sobre nós</li>
-        <li>Entrar</li>
+        <Dialog.Root>
+          <Dialog.Trigger asChild>
+            <li onClick={() => setMenuIsVisible(false)}>Entrar</li>
+          </Dialog.Trigger>
+
+          <LoginModal />
+        </Dialog.Root>
       </nav>
     </MenuHamburguerContainer>
   )

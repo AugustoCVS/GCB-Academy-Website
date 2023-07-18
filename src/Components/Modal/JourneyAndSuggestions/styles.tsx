@@ -18,28 +18,6 @@ export const Suggestions = styled.div`
   }
 `
 
-export const Overlay = styled(Dialog.Overlay)`
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-`
-
-export const Content = styled(Dialog.Content)`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  width: 33.9375rem;
-  padding: 1.5rem 2rem;
-  flex-direction: column;
-  gap: 2rem;
-  border-radius: 0.9375rem;
-  background: #fcfcfd;
-`
 export const ContentText = styled.p`
   text-align: justify;
   font-family: inherit;
@@ -59,6 +37,24 @@ export const ModalForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  @media (max-width: 350px) {
+    input {
+      width: 14.125rem;
+    }
+  }
+
+  @media (min-width: 351px) and (max-width: 500px) {
+    input {
+      width: 16.125rem;
+    }
+  }
+
+  @media (min-width: 501px) and (max-width: 600px) {
+    input {
+      width: 22.125rem;
+    }
+  }
 `
 
 export const DivButton = styled.div`

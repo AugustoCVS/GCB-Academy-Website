@@ -39,6 +39,18 @@ export const Content = styled(Dialog.Content)`
   gap: 2rem;
   border-radius: 0.9375rem;
   background: #fcfcfd;
+
+  @media (max-width: 350px) {
+    width: 18rem;
+  }
+
+  @media (min-width: 351px) and (max-width: 500px) {
+    width: 20rem;
+  }
+
+  @media (min-width: 501px) and (max-width: 600px) {
+    width: 26rem;
+  }
 `
 export const ContentText = styled.p`
   text-align: justify;
@@ -66,12 +78,40 @@ export const ModalForm = styled.form`
     border: 2px solid #dfdfe6;
     background: #fcfcfd;
   }
+
+  @media (max-width: 350px) {
+    input {
+      width: 14.125rem;
+    }
+    textarea {
+      width: 14.125rem;
+    }
+  }
+
+  @media (min-width: 351px) and (max-width: 500px) {
+    input {
+      width: 16.125rem;
+    }
+    textarea {
+      width: 16.125rem;
+    }
+  }
+
+  @media (min-width: 501px) and (max-width: 600px) {
+    input {
+      width: 22.125rem;
+    }
+    textarea {
+      width: 22.125rem;
+    }
+  }
 `
 
 export const DivButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 
   button {
     display: flex;
@@ -88,9 +128,6 @@ export const DivButton = styled.div`
 
     font-family: inherit;
     font-size: 1rem;
-
-    background-color: ${(props) => props.theme.gold};
-    color: ${(props) => props.theme.white};
   }
 `
 export const CancelButton = styled(Dialog.Close)`
