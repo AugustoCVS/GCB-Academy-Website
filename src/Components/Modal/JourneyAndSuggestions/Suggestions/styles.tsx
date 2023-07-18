@@ -178,3 +178,7 @@ export const DivMessage = styled.div`
     background: #dfdfe6;
   }
 `
+
+export const ErrorMessage = styled.p`
+  color: red;
+`

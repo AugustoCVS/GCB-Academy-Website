@@ -13,8 +13,8 @@ import {
   ModalTitle,
   Suggestions,
 } from './styles'
-import { Input } from '../../Input/Input'
-import { Button } from '../../Button/Button'
+import Input from '@/Components/Input/Input'
+import { Button } from '@/Components/Button/Button'
 import CreateSuggestionModal from './Suggestions/CreateSuggestionModal'
 import SuggestionModal from './Suggestions/SuggestionModal'
 import { Modal } from '..'

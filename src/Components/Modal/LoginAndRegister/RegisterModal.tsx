@@ -1,19 +1,73 @@
-'use client'
+import { WarningCircle, X } from 'phosphor-react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import * as zod from 'zod'
 
 import {
   CloseButton,
   DivCheckBox,
   DivTitle,
   DivWarningMessage,
+  ErrorMessage,
   ModalForm,
   ModalTitle,
 } from './styles'
-import { Input } from '../../Input/Input'
-import { Button } from '../../Button/Button'
-import { WarningCircle, X } from 'phosphor-react'
+import Input from '@/Components/Input/Input'
+import { Button } from '@/Components/Button/Button'
 import { Modal } from '..'
 
+const newUserRegisterSchema = zod.object({
+  name: zod.string().min(3, 'Insira um nome válido'),
+  email: zod.string().email('Infome um email válido'),
+  password: zod
+    .string()
+    .min(8, 'Senha inválida')
+    .regex(/^(?=.*[0-9])(?=.*[\W_]).*$/, 'Senha inválida'),
+  confirmPassword: zod
+    .string()
+    .min(8, 'Senha inválida')
+    .regex(/^(?=.*[0-9])(?=.*[\W_]).*$/, 'Senha inválida'),
+})
+
+type UserRegisterData = zod.infer<typeof newUserRegisterSchema>
+
 export default function RegisterModal() {
+  const {
+    handleSubmit,
+    reset,
+    register,
+    formState: { isSubmitSuccessful, errors },
+    setError,
+  } = useForm<UserRegisterData>({
+    resolver: zodResolver(newUserRegisterSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+    },
+  })
+
+  function verifyIfPasswordAreEqual(data: UserRegisterData) {
+    if (data.password !== data.confirmPassword) {
+      setError('confirmPassword', {
+        type: 'manual',
+        message: 'As senhas não coincidem',
+      })
+      return false
+    }
+    return true
+  }
+
+  async function handleUserRegister(data: UserRegisterData) {
+    const isPasswordsEqual = verifyIfPasswordAreEqual(data)
+
+    if (isPasswordsEqual) {
+      console.log(data)
+      reset()
+    }
+  }
+
   return (
     <Modal>
       <DivTitle>
@@ -25,35 +79,65 @@ export default function RegisterModal() {
 
       <p>Entre na sua conta para continuar o processo</p>
 
-      <ModalForm>
-        <Input color="black" type="text" placeholder="Nome Completo" required />
-        <Input color="black" type="text" placeholder="E-mail" required />
-        <Input color="black" type="text" placeholder="Senha" required />
-        <DivWarningMessage>
-          <WarningCircle size={20} />
-          <p>
-            Mínimo de 8 caracteres, no mínimo um número e um caractere especial
-          </p>
-        </DivWarningMessage>
+      <form onSubmit={handleSubmit(handleUserRegister)}>
+        <ModalForm>
+          <Input
+            id="name"
+            color="black"
+            type="text"
+            placeholder="Nome Completo"
+            {...register('name')}
+          />
+          {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
+          <Input
+            id="email"
+            color="black"
+            type="text"
+            placeholder="E-mail"
+            {...register('email')}
+          />
+          {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+          <Input
+            id="password"
+            color="black"
+            type="password"
+            placeholder="Senha"
+            {...register('password')}
+          />
+          {errors.password && (
+            <ErrorMessage>{errors.password.message}</ErrorMessage>
+          )}
+          <DivWarningMessage>
+            <WarningCircle size={20} />
+            <p>
+              Mínimo de 8 caracteres, no mínimo um número e um caractere
+              especial
+            </p>
+          </DivWarningMessage>
 
-        <Input
-          color="black"
-          type="text"
-          placeholder="Confirmação de Senha"
-          required
-        />
+          <Input
+            id="confirmPassword"
+            color="black"
+            type="password"
+            placeholder="Confirmação de Senha"
+            {...register('confirmPassword')}
+          />
+          {errors.confirmPassword && (
+            <ErrorMessage>{errors.confirmPassword.message}</ErrorMessage>
+          )}
 
-        <DivCheckBox>
-          <Input color="black" type="checkbox" />
-          <p>
-            Eu li, concordo e aceito o <span>Termos e Condições</span>
-          </p>
-        </DivCheckBox>
+          <DivCheckBox>
+            <Input color="black" type="checkbox" />
+            <p>
+              Eu li, concordo e aceito o <span>Termos e Condições</span>
+            </p>
+          </DivCheckBox>
 
-        <Button type="button" background="gold" color="white">
-          Criar
-        </Button>
-      </ModalForm>
+          <Button type="submit" background="gold" color="white">
+            Criar
+          </Button>
+        </ModalForm>
+      </form>
     </Modal>
   )
 }

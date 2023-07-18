@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import * as Dialog from '@radix-ui/react-dialog'
 
-export const ModalForm = styled.form`
+export const ModalForm = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -92,4 +92,8 @@ export const DivWarningMessage = styled.div`
     font-weight: 400;
     line-height: 1rem;
   }
+`
+
+export const ErrorMessage = styled.p`
+  color: red;
 `

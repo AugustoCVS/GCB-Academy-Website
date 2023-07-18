@@ -1,11 +1,16 @@
-import { InputHTMLAttributes } from 'react'
-
+import React, { forwardRef, InputHTMLAttributes } from 'react'
 import { InputContainer } from './styles'
 
-export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   color: 'black'
 }
 
-export function Input({ color, ...rest }: InputProps) {
-  return <InputContainer color={color} {...rest} />
-}
+const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ color, ...rest }, ref) => {
+    return <InputContainer color={color} {...rest} ref={ref} />
+  },
+)
+
+Input.displayName = 'Input'
+
+export default Input
