@@ -30,32 +30,31 @@ export const Content = styled(Dialog.Content)`
     font-weight: 400;
     line-height: 1rem;
   }
+`
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+export const ModalForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
-    div {
-      display: flex;
-      gap: 0.5rem;
-
-      input {
-        width: 1rem;
-        height: 1rem;
-      }
+  p {
+    text-align: center;
+    span {
+      color: ${(props) => props.theme.gold};
     }
+  }
 
-    p {
-      text-align: center;
-      span {
-        color: ${(props) => props.theme.gold};
-      }
-    }
+  button {
+    width: 30.125rem;
+  }
+`
+export const DivCheckBox = styled.div`
+  display: flex;
+  gap: 0.5rem;
 
-    button {
-      width: 30.125rem;
-    }
+  input {
+    width: 1rem;
+    height: 1rem;
   }
 `
 
@@ -83,11 +82,6 @@ export const ModalTitle = styled(Dialog.Title)`
   font-style: normal;
   font-weight: 500;
   line-height: 2rem;
-`
-
-export const DivCheckBox = styled.div`
-  display: flex;
-  align-items: center;
 `
 
 export const DivWarningMessage = styled.div`

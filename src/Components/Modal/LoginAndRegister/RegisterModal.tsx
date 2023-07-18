@@ -8,9 +8,10 @@ import {
   DivCheckBox,
   DivTitle,
   DivWarningMessage,
+  ModalForm,
   ModalTitle,
   Overlay,
-} from '../styles'
+} from './styles'
 import { Input } from '../../Input/Input'
 import { Button } from '../../Button/Button'
 import { WarningCircle, X } from 'phosphor-react'
@@ -29,7 +30,7 @@ export default function RegisterModal() {
 
         <p>Entre na sua conta para continuar o processo</p>
 
-        <form>
+        <ModalForm>
           <Input
             color="black"
             type="text"
@@ -63,7 +64,7 @@ export default function RegisterModal() {
           <Button type="button" background="gold" color="white">
             Criar
           </Button>
-        </form>
+        </ModalForm>
       </Content>
     </Dialog.Portal>
   )

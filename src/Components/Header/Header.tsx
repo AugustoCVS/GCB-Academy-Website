@@ -10,7 +10,7 @@ import MenuNavGcb from './components/MenuNavGCB/MenuNavGCB'
 import MenuMobile from './components/MenuMobile/MenuMobile'
 import { List } from 'phosphor-react'
 import { Button } from '../Button/Button'
-import LoginModal from '../Modal/Components/LoginModal'
+import LoginModal from '../Modal/LoginAndRegister/LoginModal'
 
 export default function Header() {
   const [menuIsVisible, setMenuIsVisible] = useState(false)

@@ -1,11 +1,19 @@
 'use client'
 
 import * as Dialog from '@radix-ui/react-dialog'
+import { X } from 'phosphor-react'
 
-import { CloseButton, Content, DivTitle, ModalTitle, Overlay } from '../styles'
+import {
+  CloseButton,
+  Content,
+  DivCheckBox,
+  DivTitle,
+  ModalForm,
+  ModalTitle,
+  Overlay,
+} from './styles'
 import { Input } from '../../Input/Input'
 import { Button } from '../../Button/Button'
-import { X } from 'phosphor-react'
 import RegisterModal from './RegisterModal'
 
 export default function LoginModal() {
@@ -22,19 +30,16 @@ export default function LoginModal() {
 
         <p>Entre na sua conta para continuar o processo</p>
 
-        <form>
+        <ModalForm>
           <Input color="black" type="text" placeholder="E-mail" required />
           <Input color="black" type="text" placeholder="Senha" required />
-
-          <div>
+          <DivCheckBox>
             <Input color="black" type="checkbox" />
             <p>Lembra minha conta</p>
-          </div>
-
+          </DivCheckBox>
           <Button type="button" background="gold" color="white">
             Entrar
           </Button>
-
           <p>
             Não tem uma conta ?{' '}
             <Dialog.Root>
@@ -45,7 +50,7 @@ export default function LoginModal() {
               <RegisterModal />
             </Dialog.Root>
           </p>
-        </form>
+        </ModalForm>
       </Content>
     </Dialog.Portal>
   )

@@ -6,7 +6,6 @@ import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 
 import UserImage from '@/assets/Celular.svg'
-
 import {
   SectionContainer,
   DivUserComment,
