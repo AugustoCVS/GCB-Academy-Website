@@ -1,23 +1,6 @@
 import { styled } from 'styled-components'
 import * as Dialog from '@radix-ui/react-dialog'
 
-export const Suggestions = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-
-  border-radius: 2.5rem;
-  border: 2px solid #dfdfe6;
-  padding: 1rem;
-
-  div {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-`
-
 export const ContentText = styled.p`
   text-align: justify;
   font-family: inherit;

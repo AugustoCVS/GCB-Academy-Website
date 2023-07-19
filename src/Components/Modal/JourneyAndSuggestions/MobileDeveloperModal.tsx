@@ -1,8 +1,6 @@
-'use client'
-
+import React, { useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
-import { WarningCircle, X } from 'phosphor-react'
-
+import { X } from 'phosphor-react'
 import {
   CloseButton,
   ContentText,
@@ -11,15 +9,18 @@ import {
   DivTitle,
   ModalForm,
   ModalTitle,
-  Suggestions,
 } from './styles'
 import Input from '@/Components/Input/Input'
 import { Button } from '@/Components/Button/Button'
 import CreateSuggestionModal from './Suggestions/CreateSuggestionModal'
 import SuggestionModal from './Suggestions/SuggestionModal'
 import { Modal } from '..'
+import UserSuggestions, { Suggestion } from './Suggestions/UserSuggestions'
 
 export default function MobileDeveloperModal() {
+  const [selectedSuggestion, setSelectedSuggestion] =
+    useState<Suggestion | null>(null)
+
   return (
     <Modal>
       <DivTitle>
@@ -58,7 +59,7 @@ export default function MobileDeveloperModal() {
                 <p>Criar Sugestão</p>
               </Dialog.Trigger>
 
-              <CreateSuggestionModal />
+              <CreateSuggestionModal journey="MobileDeveloper" />
             </Dialog.Root>
           </Button>
         </DivButton>
@@ -70,33 +71,20 @@ export default function MobileDeveloperModal() {
 
         <Dialog.Root>
           <Dialog.Trigger asChild>
-            <Suggestions>
-              <div>
-                <WarningCircle size={20} />
-                <p>Novos Desafios</p>
-              </div>
-
-              <p>Jofran Lima</p>
-            </Suggestions>
+            <UserSuggestions
+              journey="MobileDeveloper"
+              onSelectSuggestion={setSelectedSuggestion}
+            />
           </Dialog.Trigger>
-
-          <SuggestionModal />
         </Dialog.Root>
 
-        <Dialog.Root>
-          <Dialog.Trigger asChild>
-            <Suggestions>
-              <div>
-                <WarningCircle size={20} />
-                <p>Tecnologias</p>
-              </div>
-
-              <p>Jofran Lima</p>
-            </Suggestions>
-          </Dialog.Trigger>
-
-          <SuggestionModal />
-        </Dialog.Root>
+        {selectedSuggestion && (
+          <SuggestionModal
+            title={selectedSuggestion.title}
+            description={selectedSuggestion.description}
+            onClose={() => setSelectedSuggestion(null)}
+          />
+        )}
       </ModalForm>
     </Modal>
   )

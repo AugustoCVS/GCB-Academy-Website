@@ -1,8 +1,6 @@
-'use client'
-
+import React from 'react' // Importe o React
 import * as Dialog from '@radix-ui/react-dialog'
 import { WarningCircle, X } from 'phosphor-react'
-
 import {
   CancelButton,
   CloseButton,
@@ -14,7 +12,17 @@ import {
   Overlay,
 } from './styles'
 
-export default function SuggestionModal() {
+interface SuggestionModalProps {
+  title: string
+  description: string
+  onClose: () => void
+}
+
+export default function SuggestionModal({
+  title,
+  description,
+  onClose,
+}: SuggestionModalProps) {
   return (
     <Dialog.Portal>
       <Overlay />
@@ -25,13 +33,8 @@ export default function SuggestionModal() {
             <X size={18} />
           </CloseButton>
         </DivTitle>
-
         <p>
-          <strong>Título: </strong> Tecnologias
-        </p>
-
-        <p>
-          <strong>Autor: </strong> Rafael Ramos Costa
+          <strong>Título: </strong> {title}
         </p>
 
         <DivMessage>
@@ -39,14 +42,11 @@ export default function SuggestionModal() {
             <WarningCircle size={20} />
           </div>
 
-          <p>
-            Acho que seria válido ensinar aos membros do Academy sobre Google
-            Tag Manager e Redux.
-          </p>
+          <p>{description}</p>
         </DivMessage>
 
         <DivButton>
-          <CancelButton>Fechar</CancelButton>
+          <CancelButton onClick={onClose}>Fechar</CancelButton>
         </DivButton>
       </Content>
     </Dialog.Portal>

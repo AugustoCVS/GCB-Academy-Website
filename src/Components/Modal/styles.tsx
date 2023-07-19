@@ -1,3 +1,4 @@
+import 'react-toastify/dist/ReactToastify.css'
 import styled from 'styled-components'
 import * as Dialog from '@radix-ui/react-dialog'
 

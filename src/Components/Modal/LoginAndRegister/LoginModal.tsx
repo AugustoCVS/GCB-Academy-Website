@@ -1,8 +1,9 @@
 'use client'
 
 import { login } from '../../../../utils/firebase/authService'
+import { toast } from 'react-toastify'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { X } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
@@ -58,10 +59,11 @@ export default function LoginModal() {
     login(emailInput, passwordInput)
       .then((user) => {
         console.log(user)
-        // window.location.reload() // ALTERAR ESTA SOLUÇÃO
+        toast.success('Login efetuado com sucesso')
       })
       .catch(() => {
         invalidLogin.innerText = 'E-mail ou senha inválidos'
+        toast.error('Erro ao válida o login! Tente novameten!')
       })
 
     reset()

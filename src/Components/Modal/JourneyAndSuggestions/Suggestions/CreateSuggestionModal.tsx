@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
 import { useState } from 'react'
+import { getDatabase, ref, push, set } from 'firebase/database'
 
 import {
   CancelButton,
@@ -28,7 +29,11 @@ const newSuggestion = zod.object({
 
 type SuggestionData = zod.infer<typeof newSuggestion>
 
-export default function CreateSuggestionModal() {
+type Props = {
+  journey: string
+}
+
+export default function CreateSuggestionModal({ journey }: Props) {
   const {
     register,
     handleSubmit,
@@ -44,11 +49,24 @@ export default function CreateSuggestionModal() {
 
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  function handleNewSuggestion(data: SuggestionData) {
-    setIsSubmitted(true)
-    console.log(data)
+  async function handleNewSuggestion(data: SuggestionData) {
+    const db = getDatabase()
+    const suggestionsList = ref(db, `suggestions${journey}`)
+    const newSuggestion = push(suggestionsList)
 
-    reset()
+    setIsSubmitted(true)
+
+    try {
+      set(newSuggestion, {
+        title: data.suggestionTitle,
+        description: data.suggestionDescription,
+      })
+
+      console.log(data)
+      reset()
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   return (

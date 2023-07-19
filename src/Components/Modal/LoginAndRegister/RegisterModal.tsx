@@ -2,6 +2,7 @@ import { WarningCircle, X } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
+import { toast } from 'react-toastify'
 
 import {
   CloseButton,
@@ -60,8 +61,6 @@ export default function RegisterModal() {
     return true
   }
 
-  // ... rest of the code ...
-
   async function handleUserRegister(data: UserRegisterData) {
     const isPasswordsEqual = verifyIfPasswordAreEqual(data)
 
@@ -74,9 +73,11 @@ export default function RegisterModal() {
           confirmPassword: data.confirmPassword,
         })
         console.log('User registered:', user)
+        toast.success('Cadastro efetuado com sucesso')
         reset()
       } catch (error: any) {
         console.error('Error during registration:', error.message)
+        toast.error('Erro ao realizar o cadastro! Tente novameten!')
       }
     }
   }
