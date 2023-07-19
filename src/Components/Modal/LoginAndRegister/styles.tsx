@@ -13,6 +13,10 @@ export const ModalForm = styled.div`
     }
   }
 
+  #invalidLogin {
+    color: red;
+  }
+
   button {
     width: 30.125rem;
   }

@@ -48,6 +48,18 @@ export const MenuHamburguerContainer = styled.div<MenuCondition>`
       color: ${(props) => props.theme.darkGold};
     }
 
+    button {
+      background: ${(props) => props.theme.darkGold};
+      width: 10rem;
+      height: 42px;
+      padding: 0.5rem 2rem;
+      border: 0;
+      border-radius: 42px;
+      color: ${(props) => props.theme.white};
+      font-weight: bold;
+      cursor: pointer;
+    }
+
     ${({ isvisible }) =>
       isvisible &&
       css`

@@ -46,3 +46,14 @@ export const Menu = styled.div`
     font-size: 1.125rem;
   }
 `
+export const LogoutButton = styled.button`
+  background: ${(props) => props.theme.gold};
+  width: 8rem;
+  height: 42px;
+  padding: 0.5rem 2rem;
+  border: 0;
+  border-radius: 42px;
+  color: ${(props) => props.theme.white};
+  font-weight: bold;
+  cursor: pointer;
+`

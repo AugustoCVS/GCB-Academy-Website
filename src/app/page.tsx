@@ -12,19 +12,22 @@ import AboutUs from '@/Components/AboutUs/AboutUs'
 
 import { MainContainer } from '@/styles/pages.style'
 import { defaultTheme } from '@/styles/themes/defaultTheme'
+import { AuthProvider } from '@/context/AuthContext'
 
 export default function Home() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <MainContainer>
-        <Header />
-        <Hero />
-        <Journey />
-        <AboutUs />
-        <UsersReviews />
-        <AcademyNews />
-        <Footer />
-      </MainContainer>
-    </ThemeProvider>
+    <AuthProvider>
+      <ThemeProvider theme={defaultTheme}>
+        <MainContainer>
+          <Header />
+          <Hero />
+          <Journey />
+          <AboutUs />
+          <UsersReviews />
+          <AcademyNews />
+          <Footer />
+        </MainContainer>
+      </ThemeProvider>
+    </AuthProvider>
   )
 }

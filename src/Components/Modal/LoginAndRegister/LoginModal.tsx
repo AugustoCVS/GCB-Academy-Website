@@ -1,6 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { login } from '../../../../utils/firebase/authService'
+
+import { useEffect, useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { X } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
@@ -47,8 +49,20 @@ export default function LoginModal() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   function handleUserLogin(data: UserLoginData) {
+    const emailInput = data.email
+    const passwordInput = data.password
+    const invalidLogin = document.getElementById('invalidLogin') as HTMLElement
+
     setIsSubmitted(true)
-    console.log(data)
+
+    login(emailInput, passwordInput)
+      .then((user) => {
+        console.log(user)
+        // window.location.reload() // ALTERAR ESTA SOLUÇÃO
+      })
+      .catch(() => {
+        invalidLogin.innerText = 'E-mail ou senha inválidos'
+      })
 
     reset()
   }
@@ -88,6 +102,8 @@ export default function LoginModal() {
             <Input color="black" type="checkbox" />
             <p>Lembra minha conta</p>
           </DivCheckBox>
+
+          <p id="invalidLogin"></p>
 
           <Button
             type="button"
