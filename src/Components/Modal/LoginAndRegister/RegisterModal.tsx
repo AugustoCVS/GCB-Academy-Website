@@ -15,6 +15,7 @@ import {
 import Input from '@/Components/Input/Input'
 import { Button } from '@/Components/Button/Button'
 import { Modal } from '..'
+import { userRegister } from '../../../../utils/firebase/authService'
 
 const newUserRegisterSchema = zod.object({
   name: zod.string().min(3, 'Insira um nome válido'),
@@ -59,12 +60,24 @@ export default function RegisterModal() {
     return true
   }
 
+  // ... rest of the code ...
+
   async function handleUserRegister(data: UserRegisterData) {
     const isPasswordsEqual = verifyIfPasswordAreEqual(data)
 
     if (isPasswordsEqual) {
-      console.log(data)
-      reset()
+      try {
+        const user = await userRegister({
+          name: data.name,
+          email: data.email,
+          password: data.password,
+          confirmPassword: data.confirmPassword,
+        })
+        console.log('User registered:', user)
+        reset()
+      } catch (error: any) {
+        console.error('Error during registration:', error.message)
+      }
     }
   }
 
