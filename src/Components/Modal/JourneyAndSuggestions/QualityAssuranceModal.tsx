@@ -77,15 +77,15 @@ export default function QualityAssuranceModal() {
               onSelectSuggestion={setSelectedSuggestion}
             />
           </Dialog.Trigger>
-
-          {selectedSuggestion && (
-            <SuggestionModal
-              title={selectedSuggestion.title}
-              description={selectedSuggestion.description}
-              onClose={() => setSelectedSuggestion(null)}
-            />
-          )}
         </Dialog.Root>
+
+        {selectedSuggestion && (
+          <SuggestionModal
+            title={selectedSuggestion.title}
+            description={selectedSuggestion.description}
+            onClose={() => setSelectedSuggestion(null)}
+          />
+        )}
       </ModalForm>
     </Modal>
   )

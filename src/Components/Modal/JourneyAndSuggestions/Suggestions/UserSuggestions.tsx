@@ -1,4 +1,4 @@
-import React, { useEffect, useState, forwardRef, ForwardedRef } from 'react' // Importe o React
+import React, { useEffect, useState, forwardRef, ForwardedRef } from 'react'
 import { WarningCircle } from 'phosphor-react'
 import { getDatabase, ref, child, get } from 'firebase/database'
 import { Suggestions } from './styles'
