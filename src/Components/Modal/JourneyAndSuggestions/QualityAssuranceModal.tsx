@@ -82,6 +82,7 @@ export default function QualityAssuranceModal() {
         {selectedSuggestion && (
           <SuggestionModal
             title={selectedSuggestion.title}
+            author={selectedSuggestion.author}
             description={selectedSuggestion.description}
             onClose={() => setSelectedSuggestion(null)}
           />

@@ -2,9 +2,10 @@ import React, { useEffect, useState, forwardRef, ForwardedRef } from 'react'
 import { WarningCircle } from 'phosphor-react'
 import { getDatabase, ref, child, get } from 'firebase/database'
 import { Suggestions } from './styles'
+
 export interface Suggestion {
   id: string
-  author?: string
+  author?: string | null | undefined
   title: string
   description: string
 }
@@ -29,6 +30,7 @@ const UserSuggestions = forwardRef(function UserSuggestions(
       if (suggestionsData) {
         const suggestionsList = Object.keys(suggestionsData).map((key) => ({
           id: key,
+          author: suggestionsData[key].author,
           title: suggestionsData[key].title,
           description: suggestionsData[key].description,
         }))
@@ -57,7 +59,7 @@ const UserSuggestions = forwardRef(function UserSuggestions(
             <WarningCircle size={20} />
             <p>{suggestion.title}</p>
           </div>
-          <p>Anônimo</p>
+          <p>{suggestion.author}</p>
         </Suggestions>
       ))}
     </div>

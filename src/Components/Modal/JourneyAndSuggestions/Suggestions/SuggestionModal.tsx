@@ -14,12 +14,14 @@ import {
 
 interface SuggestionModalProps {
   title: string
+  author: string | null | undefined
   description: string
   onClose: () => void
 }
 
 export default function SuggestionModal({
   title,
+  author,
   description,
   onClose,
 }: SuggestionModalProps) {
@@ -35,6 +37,10 @@ export default function SuggestionModal({
         </DivTitle>
         <p>
           <strong>Título: </strong> {title}
+        </p>
+
+        <p>
+          <strong>Autor: </strong> {author}
         </p>
 
         <DivMessage>

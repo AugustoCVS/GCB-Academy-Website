@@ -57,8 +57,7 @@ export default function LoginModal() {
     setIsSubmitted(true)
 
     login(emailInput, passwordInput)
-      .then((user) => {
-        console.log(user)
+      .then(() => {
         toast.success('Login efetuado com sucesso')
       })
       .catch(() => {

@@ -5,8 +5,10 @@ import { X } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getDatabase, ref, push, set } from 'firebase/database'
+import { User } from 'firebase/auth'
+import { onAuthChanged } from '../../../../../utils/firebase/authService'
 
 import {
   CancelButton,
@@ -49,16 +51,31 @@ export default function CreateSuggestionModal({ journey }: Props) {
 
   const [isSubmitted, setIsSubmitted] = useState(false)
 
+  const [user, setUser] = useState<User | null>()
+
+  useEffect(() => {
+    return onAuthChanged((user) => {
+      if (user) {
+        setUser(user)
+      } else {
+        setUser(user)
+      }
+    })
+  }, [])
+
   async function handleNewSuggestion(data: SuggestionData) {
     const db = getDatabase()
     const suggestionsList = ref(db, `suggestions${journey}`)
     const newSuggestion = push(suggestionsList)
+
+    const author = user?.displayName
 
     setIsSubmitted(true)
 
     try {
       set(newSuggestion, {
         title: data.suggestionTitle,
+        author,
         description: data.suggestionDescription,
       })
 
