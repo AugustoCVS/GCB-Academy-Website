@@ -5,6 +5,7 @@ import { X } from 'phosphor-react'
 import {
   CloseButton,
   ContentText,
+  DivAllSugestions,
   DivButton,
   DivSuggestions,
   DivTitle,
@@ -70,14 +71,16 @@ export default function QualityAssuranceModal() {
           <span>A-z</span>
         </DivSuggestions>
 
-        <Dialog.Root>
-          <Dialog.Trigger asChild>
-            <UserSuggestions
-              journey="QualityAssurance"
-              onSelectSuggestion={setSelectedSuggestion}
-            />
-          </Dialog.Trigger>
-        </Dialog.Root>
+        <DivAllSugestions>
+          <Dialog.Root>
+            <Dialog.Trigger asChild>
+              <UserSuggestions
+                journey="QualityAssurance"
+                onSelectSuggestion={setSelectedSuggestion}
+              />
+            </Dialog.Trigger>
+          </Dialog.Root>
+        </DivAllSugestions>
 
         {selectedSuggestion && (
           <SuggestionModal

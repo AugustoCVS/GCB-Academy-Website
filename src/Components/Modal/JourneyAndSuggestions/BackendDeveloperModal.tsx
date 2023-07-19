@@ -7,6 +7,7 @@ import { X } from 'phosphor-react'
 import {
   CloseButton,
   ContentText,
+  DivAllSugestions,
   DivButton,
   DivSuggestions,
   DivTitle,
@@ -71,14 +72,16 @@ export default function BackendDeveloperModal() {
           <span>A-z</span>
         </DivSuggestions>
 
-        <Dialog.Root>
-          <Dialog.Trigger asChild>
-            <UserSuggestions
-              journey="BackendDeveloper"
-              onSelectSuggestion={setSelectedSuggestion}
-            />
-          </Dialog.Trigger>
-        </Dialog.Root>
+        <DivAllSugestions>
+          <Dialog.Root>
+            <Dialog.Trigger asChild>
+              <UserSuggestions
+                journey="BackendDeveloper"
+                onSelectSuggestion={setSelectedSuggestion}
+              />
+            </Dialog.Trigger>
+          </Dialog.Root>
+        </DivAllSugestions>
 
         {selectedSuggestion && (
           <SuggestionModal

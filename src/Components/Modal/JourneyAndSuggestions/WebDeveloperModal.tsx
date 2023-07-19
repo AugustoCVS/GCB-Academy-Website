@@ -5,6 +5,7 @@ import { X } from 'phosphor-react'
 import {
   CloseButton,
   ContentText,
+  DivAllSugestions,
   DivButton,
   DivSuggestions,
   DivTitle,
@@ -64,14 +65,16 @@ export default function WebDeveloperModal() {
           <span>A-z</span>
         </DivSuggestions>
 
-        <Dialog.Root>
-          <Dialog.Trigger asChild>
-            <UserSuggestions
-              journey="WebDeveloper"
-              onSelectSuggestion={setSelectedSuggestion}
-            />
-          </Dialog.Trigger>
-        </Dialog.Root>
+        <DivAllSugestions>
+          <Dialog.Root>
+            <Dialog.Trigger asChild>
+              <UserSuggestions
+                journey="WebDeveloper"
+                onSelectSuggestion={setSelectedSuggestion}
+              />
+            </Dialog.Trigger>
+          </Dialog.Root>
+        </DivAllSugestions>
 
         {selectedSuggestion && (
           <SuggestionModal

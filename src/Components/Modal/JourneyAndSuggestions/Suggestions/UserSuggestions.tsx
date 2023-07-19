@@ -28,14 +28,14 @@ const UserSuggestions = forwardRef(function UserSuggestions(
       const suggestionsData = snapshot.val()
 
       if (suggestionsData) {
-        const suggestionsList = Object.keys(suggestionsData).map((key) => ({
+        const suggestions = Object.keys(suggestionsData).map((key) => ({
           id: key,
           author: suggestionsData[key].author,
           title: suggestionsData[key].title,
           description: suggestionsData[key].description,
         }))
 
-        setSuggestionsList(suggestionsList)
+        setSuggestionsList(suggestions)
       } else {
         console.log('No data available')
       }

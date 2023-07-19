@@ -15,6 +15,10 @@ export const DivSuggestions = styled.div`
   align-items: center;
   justify-content: space-between;
 `
+export const DivAllSugestions = styled.div`
+  max-height: 9rem;
+  overflow-y: auto;
+`
 
 export const ModalForm = styled.form`
   display: flex;

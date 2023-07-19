@@ -18,11 +18,13 @@ export const Content = styled(Dialog.Content)`
 
   display: flex;
   width: 33.9375rem;
+  max-height: 41.5rem;
   padding: 1.5rem 2rem;
   flex-direction: column;
   gap: 2rem;
   border-radius: 0.9375rem;
   background: #fcfcfd;
+  overflow: hidden;
 
   p {
     font-family: inherit;
