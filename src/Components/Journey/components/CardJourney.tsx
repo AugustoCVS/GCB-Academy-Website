@@ -1,16 +1,28 @@
-'use client'
-
 import Image from 'next/image'
 import * as Dialog from '@radix-ui/react-dialog'
 import { User } from 'firebase/auth'
 import { useEffect, useState } from 'react'
-import { onAuthChanged } from '../../../../../utils/firebase/authService'
+import { onAuthChanged } from '../../../../utils/firebase/authService'
 
 import { DivContainer, DivContent } from './styles'
-import QAImg from '@/assets/QA.svg'
-import QualityAssuranceModal from '@/Components/Modal/JourneyAndSuggestions/QualityAssuranceModal'
+import CardJourneyModal from '@/Components/Modal/JourneyAndSuggestions/Journey/CardJourneyModal'
 
-export default function QualityAssurance() {
+export interface ICardJourneyProps {
+  id: number
+  img: string
+  title: string
+  text: string
+  stars: string
+  journeyType: string
+}
+
+export default function CardJourney({
+  img,
+  title,
+  text,
+  stars,
+  journeyType,
+}: ICardJourneyProps) {
   const [user, setUser] = useState<User | null>()
 
   useEffect(() => {
@@ -30,11 +42,11 @@ export default function QualityAssurance() {
   if (!user) {
     return (
       <DivContainer>
-        <Image src={QAImg} alt="imagem de um computador" />
+        <Image src={img} alt="imagem de um computador" />
         <DivContent>
-          <h3>Quality Assurance</h3>
-          <p>21 sugestões</p>
-          <span>*****</span>
+          <h3>{title}</h3>
+          <p>{text}</p>
+          <span>{stars}</span>
         </DivContent>
       </DivContainer>
     )
@@ -44,16 +56,16 @@ export default function QualityAssurance() {
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <DivContainer>
-          <Image src={QAImg} alt="imagem de um computador" />
+          <Image src={img} alt="imagem de um computador" />
           <DivContent>
-            <h3>Quality Assurance</h3>
-            <p>21 sugestões</p>
-            <span>*****</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+            <span>{stars}</span>
           </DivContent>
         </DivContainer>
       </Dialog.Trigger>
 
-      <QualityAssuranceModal />
+      <CardJourneyModal journeyType={journeyType} />
     </Dialog.Root>
   )
 }

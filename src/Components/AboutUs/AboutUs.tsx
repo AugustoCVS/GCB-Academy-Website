@@ -13,7 +13,7 @@ import SobreNosImg from '@/assets/SobreNosImg.svg'
 import WaveTop from '@/assets/TopWave.svg'
 import { Title } from '../Title/Title'
 
-export default function AboutUs() {
+export function AboutUs() {
   return (
     <SectionContainer>
       <WaveTopImg src={WaveTop} alt="imagem de uma onda" />
