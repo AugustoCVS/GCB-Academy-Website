@@ -14,15 +14,16 @@ import {
 import { Title } from '../Title/Title'
 import CardJourney, { ICardJourneyProps } from './components/CardJourney'
 
-import BackEndImg from '@/assets/QA.svg'
-// import WebDevImg from '@/assets/Celular.svg'
+import BackEndImg from '@/assets/BackendDeveloper.jpeg'
+import WebDevImg from '@/assets/WebDeveloper.jpeg'
 import MobileDevImg from '@/assets/Celular.svg'
-// import QAImg from '@/assets/QA.svg'
+import QAImg from '@/assets/QA.svg'
 
 const itemsCards: ICardJourneyProps[] = [
   {
     id: 1,
-    img: MobileDevImg,
+    bgColor: '#00D173',
+    img: WebDevImg,
     title: 'Web Developer',
     text: '21 sugestões',
     stars: '*****',
@@ -30,6 +31,7 @@ const itemsCards: ICardJourneyProps[] = [
   },
   {
     id: 2,
+    bgColor: '#FFAC52',
     img: MobileDevImg,
     title: 'Mobile Developer',
     text: '41 sugestões',
@@ -38,6 +40,7 @@ const itemsCards: ICardJourneyProps[] = [
   },
   {
     id: 3,
+    bgColor: '#0097FE',
     img: BackEndImg,
     title: 'Backend Developer',
     text: '21 sugestões',
@@ -46,7 +49,8 @@ const itemsCards: ICardJourneyProps[] = [
   },
   {
     id: 4,
-    img: BackEndImg,
+    bgColor: '#68D4AE',
+    img: QAImg,
     title: 'Quality Assurance',
     text: '10 sugestões',
     stars: '***',
@@ -58,6 +62,7 @@ const items = itemsCards.map((card) => (
   <DivComponent key={card.id} style={{ padding: '0 10px' }}>
     <CardJourney
       id={card.id}
+      bgColor={card.bgColor}
       img={card.img}
       title={card.title}
       text={card.text}

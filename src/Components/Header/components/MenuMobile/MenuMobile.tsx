@@ -6,7 +6,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { User } from 'firebase/auth'
 
 import { MenuHamburguerProps } from '@/interfaces/MenuHamburguerProps'
-import { MenuHamburguerContainer } from './styles'
+import { LinkPage, MenuHamburguerContainer } from './styles'
 import LoginModal from '@/Components/Modal/LoginAndRegister/LoginModal'
 import {
   logOut,
@@ -42,9 +42,15 @@ export default function MenuMobile({
       <MenuHamburguerContainer isvisible={menuIsVisible}>
         <XCircle size={35} onClick={() => setMenuIsVisible(false)} />
         <nav>
-          <li>Introdução</li>
-          <li>Jornadas</li>
-          <li>Sobre nós</li>
+          <li>
+            <LinkPage href="/#hero">Introdução</LinkPage>
+          </li>
+          <li>
+            <LinkPage href="/#journey">Jornada</LinkPage>
+          </li>
+          <li>
+            <LinkPage href="/#aboutUs">Sobre nós</LinkPage>
+          </li>
           <button onClick={() => logOut()}>Sair</button>
         </nav>
       </MenuHamburguerContainer>
@@ -55,9 +61,15 @@ export default function MenuMobile({
     <MenuHamburguerContainer isvisible={menuIsVisible}>
       <XCircle size={35} onClick={() => setMenuIsVisible(false)} />
       <nav>
-        <li>Introdução</li>
-        <li>Jornadas</li>
-        <li>Sobre nós</li>
+        <li>
+          <LinkPage href="/#hero">Introdução</LinkPage>
+        </li>
+        <li>
+          <LinkPage href="/#journey">Jornada</LinkPage>
+        </li>
+        <li>
+          <LinkPage href="/#aboutUs">Sobre nós</LinkPage>
+        </li>
         <Dialog.Root>
           <Dialog.Trigger asChild>
             <li onClick={() => setMenuIsVisible(false)}>Entrar</li>

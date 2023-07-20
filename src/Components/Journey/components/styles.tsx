@@ -1,9 +1,14 @@
+import Image from 'next/image'
 import { styled } from 'styled-components'
 
-export const DivContainer = styled.div`
+interface DivContainerProps {
+  bgColor: string
+}
+
+export const DivContainer = styled.div<DivContainerProps>`
   width: 17.3125rem;
   height: 25.3125rem;
-  background: blue;
+  background: ${(props) => props.bgColor};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +19,15 @@ export const DivContainer = styled.div`
   img {
     position: absolute;
   }
+`
+
+export const ImgContainer = styled(Image)`
+  width: 13.3125rem;
+  height: 13.3125rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
 `
 
 export const DivContent = styled.div`

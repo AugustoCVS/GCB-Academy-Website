@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { MenuCondition } from '@/interfaces/MenuCondition'
 import styled, { css } from 'styled-components'
 
@@ -75,5 +77,14 @@ export const MenuHamburguerContainer = styled.div<MenuCondition>`
           transform: scale(1);
         }
       `}
+  }
+`
+export const LinkPage = styled(Link)`
+  color: ${(props) => props.theme.black};
+  text-decoration: none;
+
+  &:hover {
+    color: ${(props) => props.theme.gold};
+    border-bottom: 2px solid ${(props) => props.theme.gold};
   }
 `
