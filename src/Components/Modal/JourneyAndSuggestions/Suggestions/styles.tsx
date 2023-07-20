@@ -131,7 +131,8 @@ export const DivButton = styled.div`
   }
 `
 export const CancelButton = styled(Dialog.Close)`
-  background: #f1f1f1;
+  background: ${(props) => props.theme.gold};
+  color: ${(props) => props.theme.white};
 `
 
 export const DivTitle = styled.div`

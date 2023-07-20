@@ -6,7 +6,7 @@ import BgImg from '@/assets/BackgroundImg.svg'
 
 export default function Hero() {
   return (
-    <SectionHeroContainer>
+    <SectionHeroContainer id="hero">
       <BackgroundImg
         src={BgImg}
         alt="Papel de parede"

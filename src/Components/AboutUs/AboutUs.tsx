@@ -15,7 +15,7 @@ import { Title } from '../Title/Title'
 
 export function AboutUs() {
   return (
-    <SectionContainer>
+    <SectionContainer id="aboutUs">
       <WaveTopImg src={WaveTop} alt="imagem de uma onda" />
       <AboutUsComponents>
         <Title type="h2" color="darkGold">

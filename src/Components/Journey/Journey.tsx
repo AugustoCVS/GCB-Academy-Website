@@ -76,7 +76,7 @@ const responsive = {
 
 export default function Journey() {
   return (
-    <SectionJourneyContainer>
+    <SectionJourneyContainer id="journey">
       <WaveBottomImg src={WaveBottom} alt="imagem de uma onda" />
       <Title type="h2" color="white">
         Jornada

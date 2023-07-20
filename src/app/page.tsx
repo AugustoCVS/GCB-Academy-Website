@@ -1,6 +1,7 @@
 'use client'
 
 import { ToastContainer } from 'react-toastify'
+import { BrowserRouter } from 'react-router-dom'
 
 import { ThemeProvider } from 'styled-components'
 import AcademyNews from '@/Components/AcademyNews/AcademyNews'
@@ -15,17 +16,19 @@ import { defaultTheme } from '@/styles/themes/defaultTheme'
 
 export default function Home() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <ToastContainer />
-      <MainContainer>
-        <Header />
-        <Hero />
-        <Journey />
-        <AboutUs />
-        <UsersReviews />
-        <AcademyNews />
-        <Footer />
-      </MainContainer>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={defaultTheme}>
+        <ToastContainer />
+        <MainContainer>
+          <Header />
+          <Hero />
+          <Journey />
+          <AboutUs />
+          <UsersReviews />
+          <AcademyNews />
+          <Footer />
+        </MainContainer>
+      </ThemeProvider>
+    </BrowserRouter>
   )
 }
