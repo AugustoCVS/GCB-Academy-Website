@@ -3,6 +3,8 @@ import { InputContainer } from './styles'
 
 type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   color: 'black'
+  placeholder?: string
+  'data-testid'?: string
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
