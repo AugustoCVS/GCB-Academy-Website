@@ -20,12 +20,12 @@ export default function Comments({
   comment,
 }: CommentProps) {
   return (
-    <DivUserComment key={id}>
+    <DivUserComment key={id} data-testid={`user-comment-${id}`}>
       <UserComment>
         <DivImage>
           <Image
             src={img}
-            alt="Imagem do usuário"
+            alt={`Imagem do usuário ${title}`}
             layout="fill"
             objectFit="cover"
           />

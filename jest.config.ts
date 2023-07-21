@@ -67,7 +67,11 @@ const config: Config = {
   // globalTeardown: undefined,
 
   // A set of global variables that need to be available in all test environments
-  // globals: {},
+  globals: {
+    'ts-jest': {
+      isolatedModules: true,
+    },
+  },
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
   // maxWorkers: "50%",
@@ -92,6 +96,7 @@ const config: Config = {
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.css$': 'identity-obj-proxy',
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -180,7 +185,7 @@ const config: Config = {
   transform: {
     '\\.svg$': 'jest-transform-stub',
     '^.+\\.css$': 'jest-transform-stub',
-    '^.+\\.(t|j)sx?$': [
+    '^.+\\.(js|jsx|mjs|cjs|ts|tsx)$': [
       '@swc/jest',
       {
         jsc: {

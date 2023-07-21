@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { defaultTheme } from '@/styles/themes/defaultTheme'
+import { defaultTheme } from '../../styles/themes/defaultTheme'
 
 interface ContainerProps {
   color: 'white' | 'darkGold'

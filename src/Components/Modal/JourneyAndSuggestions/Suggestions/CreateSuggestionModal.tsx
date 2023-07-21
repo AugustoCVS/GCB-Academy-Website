@@ -9,9 +9,10 @@ import { useEffect, useState } from 'react'
 import { getDatabase, ref, push, set } from 'firebase/database'
 import { User } from 'firebase/auth'
 import { onAuthChanged } from '../../../../../utils/firebase/authService'
+import { toast } from 'react-toastify'
 
 import {
-  CancelButton,
+  CancelButtonCreate,
   CloseButton,
   Content,
   DivButton,
@@ -80,9 +81,11 @@ export default function CreateSuggestionModal({ journey }: Props) {
       })
 
       console.log(data)
+      toast.success('Sugestão efetuada com sucesso!')
       reset()
     } catch (err) {
       console.log(err)
+      toast.error('Erro ao fazer sugestão! Tente novamete!')
     }
   }
 
@@ -119,7 +122,7 @@ export default function CreateSuggestionModal({ journey }: Props) {
           )}
 
           <DivButton>
-            <CancelButton>Cancelar</CancelButton>
+            <CancelButtonCreate>Cancelar</CancelButtonCreate>
             <Button type="button" background="gold" color="white">
               Criar
             </Button>

@@ -112,3 +112,14 @@ export const DivWarningMessage = styled.div`
     line-height: 1rem;
   }
 `
+
+export const DivInputContainer = styled.div`
+  position: relative;
+
+  svg {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+`

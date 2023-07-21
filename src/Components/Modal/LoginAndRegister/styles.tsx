@@ -101,3 +101,14 @@ export const DivWarningMessage = styled.div`
 export const ErrorMessage = styled.p`
   color: red;
 `
+
+export const DivInputContainer = styled.div`
+  position: relative;
+
+  svg {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+`

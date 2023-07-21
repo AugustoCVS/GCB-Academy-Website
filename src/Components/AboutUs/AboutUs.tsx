@@ -9,8 +9,8 @@ import {
   SectionContainer,
   WaveTopImg,
 } from './styles'
-import SobreNosImg from '@/assets/SobreNosImg.svg'
-import WaveTop from '@/assets/TopWave.svg'
+import SobreNosImg from '../../assets/SobreNosImg.svg'
+import WaveTop from '../../assets/TopWave.svg'
 import { Title } from '../Title/Title'
 
 export function AboutUs() {

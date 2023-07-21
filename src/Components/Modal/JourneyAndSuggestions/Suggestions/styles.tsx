@@ -134,6 +134,10 @@ export const CancelButton = styled(Dialog.Close)`
   background: ${(props) => props.theme.gold};
   color: ${(props) => props.theme.white};
 `
+export const CancelButtonCreate = styled(Dialog.Close)`
+  background: #f1f1f1;
+  color: ${(props) => props.theme.black};
+`
 
 export const DivTitle = styled.div`
   display: flex;

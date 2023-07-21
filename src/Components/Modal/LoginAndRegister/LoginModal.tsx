@@ -5,7 +5,7 @@ import { toast } from 'react-toastify'
 
 import { useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
-import { X } from 'phosphor-react'
+import { Envelope, Lock, X } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
@@ -13,6 +13,7 @@ import * as zod from 'zod'
 import {
   CloseButton,
   DivCheckBox,
+  DivInputContainer,
   DivTitle,
   ErrorMessage,
   ModalForm,
@@ -62,7 +63,7 @@ export default function LoginModal() {
       })
       .catch(() => {
         invalidLogin.innerText = 'E-mail ou senha inválidos'
-        toast.error('Erro ao válida o login! Tente novameten!')
+        toast.error('Erro ao válida o login! Tente novamete!')
       })
 
     reset()
@@ -81,21 +82,29 @@ export default function LoginModal() {
 
       <form onSubmit={handleSubmit(handleUserLogin)}>
         <ModalForm>
-          <Input
-            id="email"
-            color="black"
-            type="text"
-            placeholder="E-mail"
-            {...register('email')}
-          />
+          <DivInputContainer>
+            <Envelope size={25} color={'#263238'} />
+            <Input
+              id="email"
+              color="black"
+              type="text"
+              placeholder="E-mail"
+              {...register('email')}
+            />
+          </DivInputContainer>
+
           {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-          <Input
-            id="password"
-            color="black"
-            type="password"
-            placeholder="Senha"
-            {...register('password')}
-          />
+          <DivInputContainer>
+            <Lock size={25} color={'#263238'} />
+            <Input
+              id="password"
+              color="black"
+              type="password"
+              placeholder="Senha"
+              {...register('password')}
+            />
+          </DivInputContainer>
+
           {errors.password && (
             <ErrorMessage>{errors.password.message}</ErrorMessage>
           )}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
-import { X } from 'phosphor-react'
+import { MagnifyingGlass, X } from 'phosphor-react'
 
 import {
   CloseButton,
@@ -11,6 +11,7 @@ import {
   DivTitle,
   ModalForm,
   ModalTitle,
+  DivInputContainer,
 } from '../styles'
 import Input from '@/Components/Input/Input'
 import { Button } from '@/Components/Button/Button'
@@ -83,12 +84,15 @@ export default function CardJourneyModal({ journeyType }: Props) {
       <ContentText>{card.contentText}</ContentText>
 
       <ModalForm>
-        <Input
-          color="black"
-          type="text"
-          placeholder="Busque por uma sugestão"
-          required
-        />
+        <DivInputContainer>
+          <Input
+            color="black"
+            type="text"
+            placeholder="Busque por uma sugestão"
+            required
+          />
+          <MagnifyingGlass size={25} color={'#263238'} />
+        </DivInputContainer>
 
         <DivButton>
           <Button type="button" background="gold" color="white">

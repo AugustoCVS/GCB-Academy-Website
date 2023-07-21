@@ -1,4 +1,4 @@
-import { WarningCircle, X } from 'phosphor-react'
+import { Envelope, Lock, User, WarningCircle, X } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
@@ -7,6 +7,7 @@ import { toast } from 'react-toastify'
 import {
   CloseButton,
   DivCheckBox,
+  DivInputContainer,
   DivTitle,
   DivWarningMessage,
   ErrorMessage,
@@ -95,29 +96,41 @@ export default function RegisterModal() {
 
       <form onSubmit={handleSubmit(handleUserRegister)}>
         <ModalForm>
-          <Input
-            id="name"
-            color="black"
-            type="text"
-            placeholder="Nome Completo"
-            {...register('name')}
-          />
+          <DivInputContainer>
+            <User size={25} color={'#263238'} />
+            <Input
+              id="name"
+              color="black"
+              type="text"
+              placeholder="Nome Completo"
+              {...register('name')}
+            />
+          </DivInputContainer>
+
           {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
-          <Input
-            id="email"
-            color="black"
-            type="text"
-            placeholder="E-mail"
-            {...register('email')}
-          />
+          <DivInputContainer>
+            <Envelope size={25} color={'#263238'} />
+            <Input
+              id="email"
+              color="black"
+              type="text"
+              placeholder="E-mail"
+              {...register('email')}
+            />
+          </DivInputContainer>
+
           {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-          <Input
-            id="password"
-            color="black"
-            type="password"
-            placeholder="Senha"
-            {...register('password')}
-          />
+          <DivInputContainer>
+            <Lock size={25} color={'#263238'} />
+            <Input
+              id="password"
+              color="black"
+              type="password"
+              placeholder="Senha"
+              {...register('password')}
+            />
+          </DivInputContainer>
+
           {errors.password && (
             <ErrorMessage>{errors.password.message}</ErrorMessage>
           )}
@@ -128,14 +141,17 @@ export default function RegisterModal() {
               especial
             </p>
           </DivWarningMessage>
+          <DivInputContainer>
+            <Lock size={25} color={'#263238'} />
+            <Input
+              id="confirmPassword"
+              color="black"
+              type="password"
+              placeholder="Confirmação de Senha"
+              {...register('confirmPassword')}
+            />
+          </DivInputContainer>
 
-          <Input
-            id="confirmPassword"
-            color="black"
-            type="password"
-            placeholder="Confirmação de Senha"
-            {...register('confirmPassword')}
-          />
           {errors.confirmPassword && (
             <ErrorMessage>{errors.confirmPassword.message}</ErrorMessage>
           )}

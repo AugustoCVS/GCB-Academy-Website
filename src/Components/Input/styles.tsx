@@ -25,6 +25,7 @@ export const InputContainer = styled.input<ContainerProps>`
     width: 30.125rem;
     height: 3.224rem;
     padding: 1rem;
+    padding-left: 3rem;
     align-items: center;
     gap: 0.5rem;
 
