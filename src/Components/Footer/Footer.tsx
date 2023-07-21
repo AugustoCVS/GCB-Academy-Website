@@ -3,8 +3,8 @@
 import Image from 'next/image'
 import { FacebookLogo, InstagramLogo, TwitterLogo } from 'phosphor-react'
 
-import WaveTop from '@/assets/TopWave2.svg'
-import GcbLogoBranca from '@/assets/GcbLogoBranca.svg'
+import WaveTop from '../../assets/TopWave2.svg'
+import GcbLogoBranca from '../../assets/GcbLogoBranca.svg'
 import {
   DevelopedBy,
   DivFooterContent,
