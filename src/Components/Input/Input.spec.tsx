@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import 'jest-styled-components'
 import Input from './Input'
@@ -27,5 +27,20 @@ describe('Input', () => {
     const inputElement = screen.getByTestId('input')
 
     expect(inputElement).toBeInTheDocument()
+  })
+
+  it('should receive a value correctly', () => {
+    const placeholder = 'Enter your name'
+    render(
+      <Input color="black" placeholder={placeholder} data-testid="input" />,
+    )
+
+    const inputElement = screen.getByTestId('input') as HTMLInputElement
+
+    const inputValue = 'Augusto'
+
+    fireEvent.change(inputElement, { target: { value: inputValue } })
+
+    expect(inputElement.value).toBe(inputValue)
   })
 })
