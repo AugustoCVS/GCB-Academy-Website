@@ -22,7 +22,7 @@ import QAImg from '@/assets/QA.svg'
 const itemsCards: ICardJourneyProps[] = [
   {
     id: 1,
-    bgColor: '#00D173',
+    bgcolor: '#00D173',
     img: WebDevImg,
     title: 'Web Developer',
     text: '21 sugestões',
@@ -31,7 +31,7 @@ const itemsCards: ICardJourneyProps[] = [
   },
   {
     id: 2,
-    bgColor: '#FFAC52',
+    bgcolor: '#FFAC52',
     img: MobileDevImg,
     title: 'Mobile Developer',
     text: '41 sugestões',
@@ -40,7 +40,7 @@ const itemsCards: ICardJourneyProps[] = [
   },
   {
     id: 3,
-    bgColor: '#0097FE',
+    bgcolor: '#0097FE',
     img: BackEndImg,
     title: 'Backend Developer',
     text: '21 sugestões',
@@ -49,7 +49,7 @@ const itemsCards: ICardJourneyProps[] = [
   },
   {
     id: 4,
-    bgColor: '#68D4AE',
+    bgcolor: '#68D4AE',
     img: QAImg,
     title: 'Quality Assurance',
     text: '10 sugestões',
@@ -62,7 +62,7 @@ const items = itemsCards.map((card) => (
   <DivComponent key={card.id} style={{ padding: '0 10px' }}>
     <CardJourney
       id={card.id}
-      bgColor={card.bgColor}
+      bgcolor={card.bgcolor}
       img={card.img}
       title={card.title}
       text={card.text}

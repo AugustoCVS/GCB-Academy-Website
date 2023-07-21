@@ -49,7 +49,9 @@ export default function Header() {
         <Image src={GcbLogo} alt="Logo da Empresa GCB" />
         <Menu>
           <MenuNavGcb />
-          <LogoutButton onClick={() => logOut()}>Sair</LogoutButton>
+          <LogoutButton data-testid="sair-button" onClick={() => logOut()}>
+            Sair
+          </LogoutButton>
         </Menu>
       </HeaderContainer>
     )
@@ -73,7 +75,7 @@ export default function Header() {
         <MenuNavGcb />
         <Dialog.Root>
           <Button type="button" background="gold" color="white">
-            <Dialog.Trigger asChild>
+            <Dialog.Trigger asChild data-testid="entrar-button">
               <p>Entrar</p>
             </Dialog.Trigger>
           </Button>

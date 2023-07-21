@@ -11,6 +11,7 @@ export const ListContainer = styled.ul`
     display: none;
   }
 `
+
 export const NavContainer = styled.nav`
   display: flex;
 `

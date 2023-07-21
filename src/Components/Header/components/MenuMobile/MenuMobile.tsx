@@ -72,7 +72,7 @@ export default function MenuMobile({
         </li>
         <Dialog.Root>
           <Dialog.Trigger asChild>
-            <li onClick={() => setMenuIsVisible(false)}>Entrar</li>
+            <button onClick={() => setMenuIsVisible(false)}>Entrar</button>
           </Dialog.Trigger>
 
           <LoginModal />

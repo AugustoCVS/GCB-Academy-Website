@@ -2,13 +2,13 @@ import Image from 'next/image'
 import { styled } from 'styled-components'
 
 interface DivContainerProps {
-  bgColor: string
+  bgcolor: string
 }
 
 export const DivContainer = styled.div<DivContainerProps>`
   width: 17.3125rem;
   height: 25.3125rem;
-  background: ${(props) => props.bgColor};
+  background: ${(props) => props.bgcolor};
   display: flex;
   flex-direction: column;
   align-items: center;

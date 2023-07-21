@@ -8,7 +8,7 @@ import CardJourneyModal from '@/Components/Modal/JourneyAndSuggestions/Journey/C
 
 export interface ICardJourneyProps {
   id: number
-  bgColor: string
+  bgcolor: string
   img: string | any
   title: string
   text: string
@@ -18,7 +18,7 @@ export interface ICardJourneyProps {
 
 export default function CardJourney({
   img,
-  bgColor,
+  bgcolor,
   title,
   text,
   stars,
@@ -42,7 +42,7 @@ export default function CardJourney({
 
   if (!user) {
     return (
-      <DivContainer bgColor={bgColor}>
+      <DivContainer bgcolor={bgcolor}>
         <ImgContainer src={img} alt="imagem de um computador" />
         <DivContent>
           <h3>{title}</h3>
@@ -56,7 +56,7 @@ export default function CardJourney({
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <DivContainer bgColor={bgColor}>
+        <DivContainer bgcolor={bgcolor}>
           <ImgContainer src={img} alt="imagem de um computador" />
           <DivContent>
             <h3>{title}</h3>
