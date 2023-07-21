@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import CaixaDeCorreio from '@/assets/CaixaDeCorreio.svg'
+import CaixaDeCorreio from '../../assets/CaixaDeCorreio.svg'
 import {
   DivAcademyNewsContent,
   DivImage,
