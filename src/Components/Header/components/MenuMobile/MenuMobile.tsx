@@ -7,7 +7,7 @@ import { User } from 'firebase/auth'
 
 import { MenuHamburguerProps } from '@/interfaces/MenuHamburguerProps'
 import { LinkPage, MenuHamburguerContainer } from './styles'
-import LoginModal from '@/Components/Modal/LoginAndRegister/LoginModal'
+import LoginModal from '../../../Modal/LoginAndRegister/LoginModal'
 import {
   logOut,
   onAuthChanged,

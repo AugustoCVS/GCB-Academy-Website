@@ -39,8 +39,8 @@ describe('Header', () => {
   it('should call logOut when clicking "Sair"', () => {
     const authenticatedUser = {
       uid: 'user123',
-      displayName: 'John Doe',
-      email: 'john.doe@example.com',
+      displayName: 'Augusto',
+      email: 'augusto@example.com',
     }
 
     ;(onAuthChanged as jest.Mock).mockImplementation((callback: any) => {

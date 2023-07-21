@@ -14,8 +14,8 @@ import {
   ModalForm,
   ModalTitle,
 } from './styles'
-import Input from '@/Components/Input/Input'
-import { Button } from '@/Components/Button/Button'
+import Input from '../../Input/Input'
+import { Button } from '../../Button/Button'
 import { Modal } from '..'
 import { userRegister } from '../../../../utils/firebase/authService'
 

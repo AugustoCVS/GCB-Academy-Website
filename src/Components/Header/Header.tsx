@@ -6,7 +6,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { User } from 'firebase/auth'
 
 import { HeaderContainer, LogoutButton, Menu } from './styles'
-import GcbLogo from '@/assets/GcbLogo.svg'
+import GcbLogo from '../../assets/GcbLogo.svg'
 import MenuNavGcb from './components/MenuNavGCB/MenuNavGCB'
 import MenuMobile from './components/MenuMobile/MenuMobile'
 import { List } from 'phosphor-react'

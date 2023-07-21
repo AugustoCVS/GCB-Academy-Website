@@ -1,8 +1,6 @@
 'use client'
 
-import { login } from '../../../../utils/firebase/authService'
 import { toast } from 'react-toastify'
-
 import { useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Envelope, Lock, X } from 'phosphor-react'
@@ -19,10 +17,11 @@ import {
   ModalForm,
   ModalTitle,
 } from './styles'
-import Input from '@/Components/Input/Input'
-import { Button } from '@/Components/Button/Button'
+import Input from '../../Input/Input'
+import { Button } from '../../Button/Button'
 import RegisterModal from './RegisterModal'
 import { Modal } from '..'
+import { login } from '../../../../utils/firebase/authService'
 
 const newUserLoginSchema = zod.object({
   email: zod.string().email('Infome um email válido'),
