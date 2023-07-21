@@ -22,8 +22,8 @@ import {
   ModalTitle,
   Overlay,
 } from './styles'
-import Input from '@/Components/Input/Input'
-import { Button } from '@/Components/Button/Button'
+import Input from '../../../Input/Input'
+import { Button } from '../../../Button/Button'
 
 const newSuggestion = zod.object({
   suggestionTitle: zod.string().min(3, 'Insira um titulo válido'),

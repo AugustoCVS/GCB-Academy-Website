@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { onAuthChanged } from '../../../../utils/firebase/authService'
 
 import { DivContainer, DivContent, ImgContainer } from './styles'
-import CardJourneyModal from '@/Components/Modal/JourneyAndSuggestions/Journey/CardJourneyModal'
+import CardJourneyModal from '../../Modal/JourneyAndSuggestions/Journey/CardJourneyModal'
 
 export interface ICardJourneyProps {
   id: number

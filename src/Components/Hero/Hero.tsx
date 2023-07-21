@@ -2,7 +2,7 @@
 
 import { Button } from '../Button/Button'
 import { BackgroundImg, SectionHeroContainer, DivHeroContent } from './style'
-import BgImg from '@/assets/BackgroundImg.svg'
+import BgImg from '../../assets/BackgroundImg.svg'
 
 export default function Hero() {
   return (

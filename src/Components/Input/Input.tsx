@@ -1,7 +1,7 @@
 import React, { forwardRef, InputHTMLAttributes } from 'react'
 import { InputContainer } from './styles'
 
-type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   color: 'black'
   placeholder?: string
   'data-testid'?: string

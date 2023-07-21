@@ -14,10 +14,10 @@ import {
 import { Title } from '../Title/Title'
 import CardJourney, { ICardJourneyProps } from './components/CardJourney'
 
-import BackEndImg from '@/assets/BackendDeveloper.jpeg'
-import WebDevImg from '@/assets/WebDeveloper.jpeg'
-import MobileDevImg from '@/assets/Celular.svg'
-import QAImg from '@/assets/QA.svg'
+import BackEndImg from '../../assets/BackendDeveloper.jpeg'
+import WebDevImg from '../../assets/WebDeveloper.jpeg'
+import MobileDevImg from '../../assets/Celular.svg'
+import QAImg from '../../assets/QA.svg'
 
 const itemsCards: ICardJourneyProps[] = [
   {
