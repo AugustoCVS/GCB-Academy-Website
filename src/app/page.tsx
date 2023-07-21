@@ -2,8 +2,8 @@
 
 import { ToastContainer } from 'react-toastify'
 import { BrowserRouter } from 'react-router-dom'
-
 import { ThemeProvider } from 'styled-components'
+
 import AcademyNews from '@/Components/AcademyNews/AcademyNews'
 import Footer from '@/Components/Footer/Footer'
 import Header from '@/Components/Header/Header'
