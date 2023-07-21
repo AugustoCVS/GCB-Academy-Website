@@ -5,6 +5,7 @@ import { onAuthChanged } from '../../../../utils/firebase/authService'
 
 import { DivContainer, DivContent, ImgContainer } from './styles'
 import CardJourneyModal from '../../Modal/JourneyAndSuggestions/Journey/CardJourneyModal'
+import { Star } from 'phosphor-react'
 
 export interface ICardJourneyProps {
   id: number
@@ -12,7 +13,7 @@ export interface ICardJourneyProps {
   img: string | any
   title: string
   text: string
-  stars: string
+  stars: string 
   journeyType: string
 }
 
@@ -61,7 +62,7 @@ export default function CardJourney({
           <DivContent>
             <h3>{title}</h3>
             <p>{text}</p>
-            <span>{stars}</span>
+            <span><Star/> <Star /> <Star /> <Star /></span>
           </DivContent>
         </DivContainer>
       </Dialog.Trigger>

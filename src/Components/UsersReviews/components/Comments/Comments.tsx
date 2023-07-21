@@ -3,6 +3,7 @@
 import Image from 'next/image'
 
 import { DivImage, DivUserComment, UserComment } from './styles'
+import { Star } from 'phosphor-react'
 
 export interface CommentProps {
   id: number
@@ -32,7 +33,7 @@ export default function Comments({
         </DivImage>
         <div>
           <h3>{title}</h3>
-          <span>{stars}</span>
+          <span><Star/> <Star/> <Star/> <Star/></span>
           <p>{comment}</p>
         </div>
       </UserComment>

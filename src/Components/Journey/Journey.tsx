@@ -18,6 +18,7 @@ import BackEndImg from '../../assets/BackendDeveloper.jpeg'
 import WebDevImg from '../../assets/WebDeveloper.jpeg'
 import MobileDevImg from '../../assets/Celular.svg'
 import QAImg from '../../assets/QA.svg'
+import { Star } from 'phosphor-react'
 
 const itemsCards: ICardJourneyProps[] = [
   {
@@ -26,7 +27,7 @@ const itemsCards: ICardJourneyProps[] = [
     img: WebDevImg,
     title: 'Web Developer',
     text: '21 sugestões',
-    stars: '*****',
+    stars: "****",
     journeyType: 'WebDeveloper',
   },
   {

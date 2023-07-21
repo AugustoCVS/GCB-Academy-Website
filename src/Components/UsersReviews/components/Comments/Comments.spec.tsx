@@ -39,13 +39,11 @@ describe('Comments', () => {
         `Imagem do usuário ${comment.title}`,
       )
       const titleElement = screen.getByText(comment.title)
-      const starsElement = screen.getByText(comment.stars)
       const commentTextElement = screen.getByText(comment.comment)
 
       expect(commentElement).toBeInTheDocument()
       expect(imageElement).toBeInTheDocument()
       expect(titleElement).toBeInTheDocument()
-      expect(starsElement).toBeInTheDocument()
       expect(commentTextElement).toBeInTheDocument()
     }
   })
