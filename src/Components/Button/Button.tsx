@@ -7,11 +7,12 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
     children: ReactNode
     background: 'gold' | 'white'
     color: 'white' | 'gold'
+    onClick?: () => void
   }
 
-export function Button({ children, background, color }: ButtonProps) {
+export function Button({ children, background, color, onClick }: ButtonProps) {
   return (
-    <BtnContainer background={background} color={color}>
+    <BtnContainer background={background} color={color} onClick={onClick}>
       {children}
     </BtnContainer>
   )

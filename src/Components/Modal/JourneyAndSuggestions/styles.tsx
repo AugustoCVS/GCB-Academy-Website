@@ -1,16 +1,12 @@
 import { styled } from 'styled-components'
 import * as Dialog from '@radix-ui/react-dialog'
 
-export const ContentText = styled.div`
+export const ContentText = styled.p`
   text-align: justify;
-
-  p {
-    text-align: justify;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 2rem;
-  }
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
 `
 
 export const DivSuggestions = styled.div`
