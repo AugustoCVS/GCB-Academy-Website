@@ -16,7 +16,7 @@ jest.mock('next/image', () => ({
 }))
 
 describe('About Us', () => {
-  it('should render AboutUs component', () => {
+  it.only('should render AboutUs component', () => {
     render(
       <ThemeProvider theme={defaultTheme}>
         <AboutUs />
@@ -24,6 +24,8 @@ describe('About Us', () => {
     )
 
     const Title = screen.getByText('Sobre nós')
+
+    screen.logTestingPlaygroundURL()
 
     expect(Title).toBeInTheDocument()
   })
