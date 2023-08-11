@@ -1,11 +1,6 @@
-:root {
-  --white: #fff;
-  --gold: #C28E5B;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  max-width: 1440px;
 }
-
